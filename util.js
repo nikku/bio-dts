@@ -151,12 +151,12 @@ export function matcher(strings, ...args) {
     return null;
   }
 
-  function isNode(n) {
-    return Object.prototype.toString.call(n) === '[object Object]';
+  function isNode(obj) {
+    return Object.prototype.toString.call(obj) === '[object Object]';
   }
 
-  function hasProperty(node, property) {
-    return Object.prototype.hasOwnProperty.call(node, property);
+  function hasProperty(obj, property) {
+    return Object.prototype.hasOwnProperty.call(obj, property);
   }
 
   /**
