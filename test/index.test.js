@@ -7,19 +7,21 @@ import { expect } from 'chai';
 
 describe('bio-dts', function() {
 
+  testTransform('args-constructor');
+
   testTransform('basic');
 
-  testTransform('args-constructor');
+  testTransform('inheritance');
+
+  testTransform('inline-method');
 
   testTransform('jsdoc');
 
-  testTransform('no-proto');
-
   testTransform('modifiers');
 
-  testTransform('static');
+  testTransform('no-proto');
 
-  testTransform('inheritance');
+  testTransform('static');
 
 });
 
