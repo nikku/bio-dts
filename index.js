@@ -167,7 +167,7 @@ function findSuperDeclarations(constructor, nodes) {
       };
 
       const superCallMatches = matcher`
-        ${clazz}.call(...$$$);
+        ${clazz}.call($$$);
       `;
 
       const superCalls = superCallMatches(constructor.node.get('body', 'body'));
@@ -186,19 +186,19 @@ function findSuperDeclarations(constructor, nodes) {
 function findConstructors(nodes) {
 
   const fns = matcher`
-    function $1(...$$$) {
+    function $1($$$) {
       $$$
     }
   `;
 
   const namedExportFns = matcher`
-    export function $1(...$$$) {
+    export function $1($$$) {
       $$$
     }
   `;
 
   const defaultExportFns = matcher`
-    export default function $1(...$$$) {
+    export default function $1($$$) {
       $$$
     }
   `;

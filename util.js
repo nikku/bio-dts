@@ -63,17 +63,18 @@ export function matcher(strings, ...args) {
 
   function wildcard(node) {
 
-    if (isArray(node) && node.length === 1 && node[0].type === 'SpreadElement' && node[0].argument.name === '$$$') {
-      return true;
+    if (isArray(node) && node.length === 1) {
+      node = node[0];
     }
 
-    if (isArray(node) && node.length === 1 && node[0].type === 'RestElement' && node[0].argument.name === '$$$') {
+    if (node && node.type === 'Identifier' && node.name === '$$$') {
       return true;
     }
 
     if (node && node.type === 'BlockStatement' && node.body?.expression?.name === '$$$') {
       return true;
     }
+
   }
 
   function ident(node) {

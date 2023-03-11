@@ -64,7 +64,7 @@ describe('util', function() {
 
       // given
       const fnMatcher = matcher`
-        function $1(...$$$) {
+        function $1($$$) {
           $$$
         }
       `;
@@ -98,7 +98,7 @@ describe('util', function() {
 
       // given
       const fnMatcher = matcher`
-        export function $1(...$$$) {
+        export function $1($$$) {
           $$$
         }
       `;
@@ -148,7 +148,7 @@ describe('util', function() {
 
       // given
       const callMatcher = matcher`
-        Bar.call(...$$$);
+        Bar.call($$$);
       `;
 
       const ast = parse(`
