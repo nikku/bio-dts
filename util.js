@@ -62,7 +62,7 @@ export function matcher(strings, ...args) {
   const expr = body.get(0);
 
   /**
-   * We accept the following wildcards:
+   * Match for wildcards:
    *
    *   - block statement with a single $$$
    *   - expression statement with $$$
@@ -74,10 +74,6 @@ export function matcher(strings, ...args) {
    * @return {boolean}
    */
   function wildcard(node) {
-
-    if (node && node.type === 'BlockStatement') {
-      node = node.body;
-    }
 
     if (isArray(node) && node.length === 1) {
       node = node[0];
@@ -93,9 +89,45 @@ export function matcher(strings, ...args) {
 
   }
 
+  /**
+   * Matches ${IDENTIFIER} single node.
+   *
+   * @param {any} node
+   *
+   * @return {any|null}
+   */
   function ident(node) {
     if (node.type === 'Identifier' && /^\$.+/.test(node.name)) {
       return node.name.substring(1);
+    }
+
+    return null;
+  }
+
+  /**
+   * Matches $${IDENTIFIER} many nodes:
+   *
+   *   - block statement with a single $${IDENT}
+   *   - expression statement with $${IDENT}
+   *   - identifier $${IDENT}
+   *   - wrapped as list
+   *
+   * @param {any} node
+   *
+   * @return {any|null}
+   */
+  function anyIdent(node) {
+
+    if (isArray(node) && node.length === 1) {
+      node = node[0];
+    }
+
+    if (node && node.type === 'ExpressionStatement') {
+      node = node.expression;
+    }
+
+    if (node && node.type === 'Identifier' && /^\$\$.+/.test(node.name)) {
+      return node.name.substring(2);
     }
 
     return null;
@@ -139,6 +171,12 @@ export function matcher(strings, ...args) {
       if (wildcard(expectedVal.value)) {
         continue;
       }
+
+      const id = anyIdent(expectedVal.value);
+
+      if (id) {
+        results[id] = nodeVal;
+        continue;
       }
 
       if (isArray(expectedVal.value)) {

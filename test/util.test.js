@@ -168,6 +168,44 @@ describe('util', function() {
       expect(matches[0][0]).to.equal(body.get(0));
     });
 
+
+    it('should capture any identifier', function() {
+
+      // given
+      const fnMatcher = matcher`
+        function Foo($$1) {
+          $$2
+        }
+      `;
+
+      const ast = parse(`
+        function Foo() {
+        }
+
+        function Foo(a, b, c) {
+          return a + b;
+        }
+      `);
+
+      const body = path(ast.program).get('body');
+
+      // when
+      const matches = fnMatcher(body);
+
+      // then
+      expect(matches).to.have.length(2);
+      expect(matches[0]).to.have.length(3);
+      expect(matches[1]).to.have.length(3);
+
+      expect(matches[0][0]).to.equal(body.get(0));
+      expect(matches[0][1].value).to.eql([]);
+      expect(matches[0][2].value).to.eql([]);
+
+      expect(matches[1][0]).to.equal(body.get(1));
+      expect(matches[1][1].value).to.have.length(3);
+      expect(matches[1][2].value).to.have.length(1);
+    });
+
   });
 
 });
