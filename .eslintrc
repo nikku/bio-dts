@@ -1,0 +1,10 @@
+{
+  "extends": "plugin:bpmn-io/recommended",
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2022
+  }
+}
