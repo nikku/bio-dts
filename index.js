@@ -64,7 +64,8 @@ function clazz(cls) {
         "generator": false,
         "async": false,
         "params": m.member.params,
-        "body": m.member.body
+        "body": m.member.body,
+        "comments": m.comments
       }
     })
   ];
@@ -237,6 +238,7 @@ function findProtoMethods(constructor, nodes) {
     return {
       name: identifier.value.name,
       member: member.value,
+      comments: node.get('comments').value,
       node
     };
   });
@@ -254,6 +256,7 @@ function findEmbeddedMethods(constructor) {
     return {
       name: identifier.value.name,
       member: member.value,
+      comments: node.get('comments').value,
       node
     };
   });
