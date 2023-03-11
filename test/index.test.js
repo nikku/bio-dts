@@ -28,7 +28,7 @@ describe('bio-dts', function() {
 
 // helpers //////////////////
 
-function testTransform(name, iit=it) {
+function testTransform(name, iit = it) {
 
   iit(`should transform <${ name }>`, function() {
 

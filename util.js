@@ -173,7 +173,7 @@ export function matcher(strings, ...args) {
    *
    * @return {Path[] || null}
    */
-  function matchNode(node, expectedNode, results=[]) {
+  function matchNode(node, expectedNode, results = []) {
 
     if (!node.value) {
       DBG && console.log('BAIL no value');

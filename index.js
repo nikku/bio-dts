@@ -1,21 +1,20 @@
-import { visit, print } from 'recast';
+import { print } from 'recast';
 
 import { matcher, parse, path } from './util.js';
 
 import {
-  namedTypes as n,
   builders as b
 } from 'ast-types';
 
 function superCall() {
   return b.expressionStatement.from({
-    "type": "ExpressionStatement",
-    "expression": {
-      "type": "CallExpression",
-      "callee": {
-        "type": "Super"
+    'type': 'ExpressionStatement',
+    'expression': {
+      'type': 'CallExpression',
+      'callee': {
+        'type': 'Super'
       },
-      "arguments": []
+      'arguments': []
     }
   });
 }
@@ -30,66 +29,66 @@ function clazz(cls) {
 
   const methods = [
     {
-      "type": "ClassMethod",
-      "static": false,
-      "key": {
-        "type": "Identifier",
-        "name": "constructor"
+      'type': 'ClassMethod',
+      'static': false,
+      'key': {
+        'type': 'Identifier',
+        'name': 'constructor'
       },
-      "computed": false,
-      "kind": "constructor",
-      "id": null,
-      "generator": false,
-      "async": false,
-      "params": constructor.params,
-      "body": constructor.body,
-      "comments": rest.length ? [ {
+      'computed': false,
+      'kind': 'constructor',
+      'id': null,
+      'generator': false,
+      'async': false,
+      'params': constructor.params,
+      'body': constructor.body,
+      'comments': rest.length ? [ {
         leading: true,
         trailing: false,
-        type: "CommentBlock",
+        type: 'CommentBlock',
         value: '*\n * @param' + rest.join('* @param'),
       } ] : constructor.comments
     },
     ...cls.members.filter(m => m.member.type === 'FunctionExpression').map(m => {
       return {
-        "type": "ClassMethod",
-        "static": false,
-        "key": {
-          "type": "Identifier",
-          "name": m.name
+        'type': 'ClassMethod',
+        'static': false,
+        'key': {
+          'type': 'Identifier',
+          'name': m.name
         },
-        "computed": false,
-        "kind": "method",
-        "id": null,
-        "generator": false,
-        "async": false,
-        "params": m.member.params,
-        "body": m.member.body,
-        "comments": m.comments
-      }
+        'computed': false,
+        'kind': 'method',
+        'id': null,
+        'generator': false,
+        'async': false,
+        'params': m.member.params,
+        'body': m.member.body,
+        'comments': m.comments
+      };
     })
   ];
 
   return b.classDeclaration.from({
-    "type": "ClassDeclaration",
-    "id": {
-      "type": "Identifier",
-      "name": cls.name
+    'type': 'ClassDeclaration',
+    'id': {
+      'type': 'Identifier',
+      'name': cls.name
     },
-    "superClass": cls.superDeclaration ? {
-      "type": "Identifier",
-      "name": cls.superDeclaration.clazz
+    'superClass': cls.superDeclaration ? {
+      'type': 'Identifier',
+      'name': cls.superDeclaration.clazz
     } : null,
-    "body": {
-      "type": "ClassBody",
-      "body": [
+    'body': {
+      'type': 'ClassBody',
+      'body': [
         ...methods
       ]
     },
-    "comments": intro ? [ {
+    'comments': intro ? [ {
       leading: true,
       trailing: false,
-      type: "CommentBlock",
+      type: 'CommentBlock',
       value: intro
     } ] : constructor.comments || []
   });
@@ -126,7 +125,7 @@ export function transformSource(src) {
     members.forEach(m => {
       if (m.member.type === 'FunctionExpression') {
         m.node.replace();
-      };
+      }
     });
 
     if (superDeclaration) {
@@ -260,6 +259,4 @@ function findEmbeddedMethods(constructor) {
       node
     };
   });
-
-  return [];
 }
