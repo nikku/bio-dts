@@ -2,7 +2,10 @@ import { parse as recastParse } from 'recast';
 import { Path as PathConstructor } from 'ast-types';
 
 /**
- * @typedef { import('ast-types/lib/path').Path } Path
+ * @typedef { {
+ *   get(...any) => any,
+ *   value: any
+ * } } Path
  */
 
 import typescriptParser from 'recast/parsers/typescript.js';
