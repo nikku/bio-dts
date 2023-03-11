@@ -61,17 +61,33 @@ export function matcher(strings, ...args) {
 
   const expr = body.get(0);
 
+  /**
+   * We accept the following wildcards:
+   *
+   *   - block statement with a single $$$
+   *   - expression statement with $$$
+   *   - identifier $$$
+   *   - wrapped as list
+   *
+   * @param {any} node
+   *
+   * @return {boolean}
+   */
   function wildcard(node) {
+
+    if (node && node.type === 'BlockStatement') {
+      node = node.body;
+    }
 
     if (isArray(node) && node.length === 1) {
       node = node[0];
     }
 
-    if (node && node.type === 'Identifier' && node.name === '$$$') {
-      return true;
+    if (node && node.type === 'ExpressionStatement') {
+      node = node.expression;
     }
 
-    if (node && node.type === 'BlockStatement' && node.body?.expression?.name === '$$$') {
+    if (node && node.type === 'Identifier' && node.name === '$$$') {
       return true;
     }
 
@@ -121,7 +137,8 @@ export function matcher(strings, ...args) {
       const nodeVal = node.get(key);
 
       if (wildcard(expectedVal.value)) {
-        return results;
+        continue;
+      }
       }
 
       if (isArray(expectedVal.value)) {
