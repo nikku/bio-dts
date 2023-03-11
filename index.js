@@ -109,8 +109,8 @@ export function transformSource(src) {
 
   for (const constructor of constructors) {
     const members = constructor.members = [
-      ...findProtoMethods(constructor, body),
-      ...findEmbeddedMethods(constructor)
+      ...findEmbeddedMethods(constructor),
+      ...findProtoMethods(constructor, body)
     ];
 
     const superDeclaration = constructor.superDeclaration = findSuperDeclarations(constructor, body);
