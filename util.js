@@ -23,6 +23,11 @@ function keys(obj) {
   });
 }
 
+/**
+ * @param {any} arr
+ *
+ * @return {boolean}
+ */
 function isArray(arr) {
   return Array.isArray(arr);
 }
@@ -65,7 +70,6 @@ export function matcher(strings, ...args) {
 
     return code;
   }, '');
-
 
   const ast = parse(code, {
     parser: typescriptParser
