@@ -9,6 +9,20 @@ import typescriptParser from 'recast/parsers/typescript.js';
 
 const DBG = false;
 
+/**
+ * Return numeric or string keys of the given object.
+ *
+ * @param {any} obj
+ * @return {(string|number)[]}
+ */
+function keys(obj) {
+  return Object.keys(obj).map(k => {
+    const n = parseInt(k, 10);
+
+    return isNaN(n) ? k : n;
+  });
+}
+
 function isArray(arr) {
   return Array.isArray(arr);
 }
@@ -162,11 +176,7 @@ export function matcher(strings, ...args) {
       return results;
     }
 
-    const expectedNodeValue = expectedNode.value;
-
-    const expectedKeys = Object.keys(expectedNode.value).map((k) => parseInt(k, 10) || k);
-
-    for (const key of expectedKeys) {
+    for (const key of keys(expectedNode.value)) {
       if ([ 'loc', 'start', 'end' ].includes(key)) {
         continue;
       }
@@ -219,10 +229,8 @@ export function matcher(strings, ...args) {
   return function match(nodes) {
     const matches = [];
 
-    const keys = Object.keys(nodes.value);
-
-    for (const key of keys) {
-      const node = nodes.get(+key);
+    for (const key of keys(nodes.value)) {
+      const node = nodes.get(key);
       const matched = matchNode(node, expr);
 
       if (matched) {
