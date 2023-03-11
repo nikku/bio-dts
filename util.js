@@ -1,5 +1,9 @@
 import { parse as recastParse } from 'recast';
-import { Path } from 'ast-types';
+import { Path as PathConstructor } from 'ast-types';
+
+/**
+ * @typedef { import('ast-types/lib/path').Path } Path
+ */
 
 import typescriptParser from 'recast/parsers/typescript.js';
 
@@ -26,7 +30,7 @@ export function parse(code) {
  * @return {Path}
  */
 export function path(node) {
-  return new Path(node);
+  return new PathConstructor(node);
 }
 
 /**
@@ -141,6 +145,13 @@ export function matcher(strings, ...args) {
     return Object.prototype.hasOwnProperty.call(node, property);
   }
 
+  /**
+   * @param {Path} node
+   * @param {Path} expectedNode
+   * @param {Path[]} results
+   *
+   * @return {Path[] || null}
+   */
   function matchNode(node, expectedNode, results=[]) {
 
     const id = ident(expectedNode.value);
