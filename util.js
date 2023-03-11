@@ -175,6 +175,11 @@ export function matcher(strings, ...args) {
    */
   function matchNode(node, expectedNode, results=[]) {
 
+    if (!node.value) {
+      DBG && console.log('BAIL no value');
+      return;
+    }
+
     const id = ident(expectedNode.value);
 
     if (id) {

@@ -206,6 +206,30 @@ describe('util', function() {
       expect(matches[1][2].value).to.have.length(1);
     });
 
+
+    it('should strict match non-existing node', function() {
+
+      // given
+      const fnMatcher = matcher`
+        function test(a, $1, $2) {
+          $$$
+        }
+      `;
+
+      const ast = parse(`
+        function test(a, b) {
+        }
+      `);
+
+      const body = path(ast.program).get('body');
+
+      // when
+      const matches = fnMatcher(body);
+
+      // then
+      expect(matches).to.be.empty;
+    });
+
   });
 
 });
