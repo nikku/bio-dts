@@ -10,7 +10,7 @@ import { Path as PathConstructor } from 'ast-types';
 
 import typescriptParser from 'recast/parsers/typescript.js';
 
-const DBG = false;
+const DBG = /match/.test(process?.env?.LOG_DEBUG);
 
 /**
  * Return numeric or string keys of the given object.
