@@ -1,6 +1,6 @@
 import { readFile } from './helper.js';
 
-import { transformSource } from '../index.js';
+import transform from '../lib/transform.js';
 
 import { expect } from 'chai';
 
@@ -35,7 +35,7 @@ function testTransform(name, iit = it) {
     const expected = readFile(`fixtures/${name}.expected.js`);
     const actual = readFile(`fixtures/${name}.js`);
 
-    expect(transformSource(actual)).to.eql(expected);
+    expect(transform(actual)).to.eql(expected);
   });
 
 }
