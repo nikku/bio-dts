@@ -27,4 +27,11 @@ class Foo {
  sweeeet(n) {
    return n + 1;
  }
+
+ /**
+  * Static variable!
+  *
+  * @type {boolean}
+  */
+ static bar = false;
 }

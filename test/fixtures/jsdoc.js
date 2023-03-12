@@ -25,3 +25,10 @@ function Foo(a, b) {
 Foo.prototype.sweeeet = function(n) {
   return n + 1;
 }
+
+/**
+ * Static variable!
+ *
+ * @type {boolean}
+ */
+Foo.bar = false;

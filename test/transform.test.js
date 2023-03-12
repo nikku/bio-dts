@@ -11,15 +11,21 @@ describe('bio-dts', function() {
 
   testTransform('basic');
 
+  testTransform('exports');
+
   testTransform('inheritance');
 
   testTransform('inline-method');
 
   testTransform('jsdoc');
 
-  testTransform('modifiers');
+  testTransform('jsdoc-multi-comments');
+
+  testTransform('jsdoc-exports');
 
   testTransform('no-proto');
+
+  testTransform('private');
 
   testTransform('static');
 

@@ -2,6 +2,10 @@ class Foo {
   constructor(a) {
 
   }
-}
 
-Foo.$inject = [ 'a' ];
+  static bar(a) {
+    return a + 1;
+  }
+
+  static $inject = [ 'a' ];
+}
