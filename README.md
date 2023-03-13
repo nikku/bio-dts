@@ -12,7 +12,7 @@ This module provides `pre` and `post` processing helpers to a type definition pi
 ## Usage
 
 ```sh
-npx bio-dts --outDir dist/types lib/**/*.js
+npx bio-dts --outDir dist/types -r lib
 ```
 
 ## API
