@@ -1,13 +1,13 @@
 class Foo {
- constructor() {
+  constructor() {
 
-   /**
-    * @private
-    */
-   this.bar = 10;
+    /**
+     * @private
+     */
+    this.bar = 10;
 
-   this._woop = 100;
- }
+    this._woop = 100;
+  }
 
- _ooops() {}
+  _ooops() {}
 }

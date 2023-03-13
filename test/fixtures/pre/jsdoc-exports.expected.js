@@ -7,12 +7,12 @@
  *
  */
 export class Foo {
- /**
-  * @param {import('./A').default} a
-  */
- constructor(a) {
+  /**
+   * @param {import('./A').default} a
+   */
+  constructor(a) {
 
- }
+  }
 }
 
 /**
@@ -20,10 +20,10 @@ export class Foo {
  *
  */
 export default class Bar {
- /**
-  * @param {Foo} foo
-  */
- constructor(foo) {
+  /**
+   * @param {Foo} foo
+   */
+  constructor(foo) {
 
- }
+  }
 }

@@ -1,3 +1,3 @@
 declare class Foo {
- constructor() {}
+  constructor() {}
 }

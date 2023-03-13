@@ -7,10 +7,10 @@
  *
  */
 class Bar {
- /**
-  * @param {Foo} foo
-  */
- constructor(foo) {
+  /**
+   * @param {Foo} foo
+   */
+  constructor(foo) {
 
- }
+  }
 }
