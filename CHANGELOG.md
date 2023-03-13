@@ -6,6 +6,10 @@ All notable changes to [bio-dts](https://github.com/nikku/bio-dts) are documente
 
 _**Note:** Yet to be released changes appear here._
 
+## 0.3.0
+
+* `FEAT`: strip unneeded JSDoc tags
+
 ## 0.2.1
 
 * `FIX`: support multiple inherits statements per class
