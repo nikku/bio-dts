@@ -16,6 +16,8 @@ describe('bio-dts', function() {
 
     testPreTransform('pre/basic');
 
+    testPreTransform('pre/const');
+
     testPreTransform('pre/exports');
 
     testPreTransform('pre/inheritance');
@@ -36,6 +38,8 @@ describe('bio-dts', function() {
   });
 
   describe('post', function() {
+
+    testPostTransform('post/const');
 
     testPostTransform('post/optional-args', it.skip);
 
