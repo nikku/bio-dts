@@ -1,1 +1,3 @@
-export { default as transform } from './lib/transform.js';
+export { default as preTransform } from './lib/pre-transform.js';
+
+export { default as postTransform } from './lib/post-transform.js';

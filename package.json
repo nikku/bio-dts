@@ -8,7 +8,7 @@
     "all": "npm run lint && npm run test",
     "lint": "eslint .",
     "test": "mocha test",
-    "test:dts": "node lib/generate-types.js test/fixtures/*.js"
+    "test:dts": "node lib/generate-types.js test/fixtures/**/.js"
   },
   "author": "",
   "license": "MIT",
