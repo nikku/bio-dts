@@ -37,6 +37,8 @@ describe('bio-dts', function() {
 
   describe('post', function() {
 
+    testPostTransform('post/optional-args');
+
     testPostTransform('post/private');
 
   });
