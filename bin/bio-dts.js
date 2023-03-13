@@ -17,8 +17,26 @@ async function run() {
     fileNames
   } = ts.parseCommandLine(args);
 
+  const help = args.includes('--help') || args.includes('-h');
   const verbose = args.includes('--verbose');
   const recursive = args.includes('--recursive') || args.includes('-r');
+
+  if (help) {
+    console.log(`Usage: bio-dts [options] [...filesOrGlobs]
+
+  Options:
+    --recursive, -r    recurse into directories
+    --verbose          enable verbose logging
+
+    Additional options will be passed to the typescript generator.
+
+  Examples:
+    $ bio-dts --outDir dist -r lib
+    $ bio-dts 'lib/**/*.js'
+`);
+
+    return;
+  }
 
   const globPattern = recursive ? '**/*.js' : '*.js';
 
