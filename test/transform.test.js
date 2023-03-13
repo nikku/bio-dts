@@ -37,11 +37,14 @@ describe('transform', function() {
     testPreTransform('pre/static');
   });
 
+
   describe('post', function() {
 
     testPostTransform('post/const');
 
     testPostTransform('post/optional-args', it.skip);
+
+    testPostTransform('post/jsdoc');
 
     testPostTransform('post/private');
 
