@@ -8,7 +8,7 @@ import {
 import { expect } from 'chai';
 
 
-describe('bio-dts', function() {
+describe('transform', function() {
 
   describe('pre', function() {
 

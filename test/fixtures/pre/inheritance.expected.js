@@ -5,3 +5,15 @@ class Foo extends Bar {
     super();
   }
 }
+
+export class Woop extends Bar {
+  constructor(a) {
+    super();
+  }
+}
+
+export default class Default extends Bar {
+  constructor(a) {
+    super();
+  }
+}
