@@ -1,3 +1,3 @@
 # bio-dts
 
-Utilities to generate sane types definitions from JavaScript files.
+Utilities to generate sane and clean type definitions from JavaScript files.
