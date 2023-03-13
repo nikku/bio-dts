@@ -6,6 +6,10 @@ All notable changes to [bio-dts](https://github.com/nikku/bio-dts) are documente
 
 _**Note:** Yet to be released changes appear here._
 
+## 0.2.0
+
+* `FEAT`: pretty print output
+
 ## 0.1.2
 
 * `FIX`: make binary executable
