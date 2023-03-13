@@ -1,7 +1,7 @@
 {
   "name": "bio-dts",
   "version": "1.0.0",
-  "description": "Generate types from source code",
+  "description": "Generate sane and clean types from JavaScript sources",
   "type": "module",
   "main": "index.js",
   "bin": "bin/bio-dts",
@@ -11,7 +11,7 @@
     "test": "mocha test",
     "test:dts": "node bin/bio-dts.js --outDir dist test/fixtures/**/*.js"
   },
-  "author": "",
+  "author": "Nico Rehwaldt",
   "license": "MIT",
   "dependencies": {
     "@babel/parser": "^7.21.2",
