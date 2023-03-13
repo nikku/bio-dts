@@ -9,7 +9,7 @@
     "all": "npm run lint && npm run test && npm run test:dts",
     "lint": "eslint .",
     "test": "mocha test",
-    "test:dts": "node bin/bio-dts.js --outDir dist -r test/fixtures"
+    "test:dts": "node bin/cmd.js --outDir dist -r test/fixtures"
   },
   "author": "Nico Rehwaldt",
   "license": "MIT",
