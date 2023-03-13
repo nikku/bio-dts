@@ -24,5 +24,10 @@
     "eslint": "^8.36.0",
     "eslint-plugin-bpmn-io": "^1.0.0",
     "mocha": "^10.2.0"
-  }
+  },
+  "files": [
+    "bin",
+    "lib",
+    "index.js"
+  ]
 }
