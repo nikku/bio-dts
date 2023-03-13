@@ -4,7 +4,7 @@
   "description": "Generate sane and clean types from JavaScript sources",
   "type": "module",
   "main": "index.js",
-  "bin": "bin/bio-dts.js",
+  "bin": "bin/cmd.js",
   "scripts": {
     "all": "npm run lint && npm run test && npm run test:dts",
     "lint": "eslint .",
