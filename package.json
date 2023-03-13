@@ -4,11 +4,12 @@
   "description": "Generate types from source code",
   "type": "module",
   "main": "index.js",
+  "bin": "bin/bio-dts",
   "scripts": {
     "all": "npm run lint && npm run test",
     "lint": "eslint .",
     "test": "mocha test",
-    "test:dts": "node lib/generate-types.js --outDir dist test/fixtures/**/*.js"
+    "test:dts": "node bin/bio-dts.js --outDir dist test/fixtures/**/*.js"
   },
   "author": "",
   "license": "MIT",
