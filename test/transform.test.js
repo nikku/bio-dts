@@ -42,9 +42,15 @@ describe('transform', function() {
 
     testPostTransform('post/const');
 
-    testPostTransform('post/optional-args');
+    testPostTransform('post/optional-args-class');
 
-    testPostTransform('post/jsdoc');
+    testPostTransform('post/optional-args-function');
+
+    testPostTransform('post/optional-args-typo');
+
+    testPostTransform('post/jsdoc-class');
+
+    testPostTransform('post/jsdoc-function');
 
     testPostTransform('post/private');
 

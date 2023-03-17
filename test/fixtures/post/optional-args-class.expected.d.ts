@@ -20,22 +20,3 @@ declare class EventBus {
    */
   on(event: string, priority: number, callback: Function, context?: any): void;
 }
-
-/**
- * YO!
- *
- * @param event
- * @param callback
- * @param context
- */
-declare function on(event: string, callback: Function, context?: any): void
-
-/**
- * YO!
- *
- * @param event
- * @param priority
- * @param callback
- * @param context
- */
-declare function on(event: string, priority: number, callback: Function, context?: any): void
