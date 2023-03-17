@@ -13,4 +13,15 @@ class Bar {
   constructor(foo) {
 
   }
+
+  /**
+   * YES
+   */
+  /**
+   * No
+   * @return {string}
+   */
+  woop() {
+
+  }
 }

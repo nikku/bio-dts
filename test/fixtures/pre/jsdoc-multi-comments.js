@@ -10,3 +10,14 @@
 function Bar(foo) {
 
 }
+
+/**
+ * YES
+ */
+/**
+ * No
+ * @return {string}
+ */
+Bar.prototype.woop = function() {
+
+};
