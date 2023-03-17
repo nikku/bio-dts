@@ -47,18 +47,12 @@ async function run() {
 
   for (const fileName of fileNames) {
 
-    try {
-      if (fs.statSync(fileName).isDirectory) {
+    if (isDir(fileName)) {
+      const globbedFiles = await glob(globPattern, { cwd: fileName, filesOnly: true });
 
-        const globbedFiles = await glob(globPattern, { cwd: fileName, filesOnly: true });
-
-        files.push(...globbedFiles.map(f => path.join(fileName, f)));
-      } else {
-        files.push(fileName);
-      }
-    } catch (err) {
-
-      // ignore
+      files.push(...globbedFiles.map(f => path.join(fileName, f)));
+    } else {
+      files.push(fileName);
     }
   }
 
@@ -73,6 +67,17 @@ async function run() {
   });
 
   console.log('Done.');
+}
+
+function isDir(fileName) {
+
+  try {
+    return fs.statSync(fileName).isDirectory();
+  } catch (err) {
+
+    // ignore
+    return false;
+  }
 }
 
 function getTypescript() {
