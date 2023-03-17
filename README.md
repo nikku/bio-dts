@@ -9,26 +9,22 @@ Utilities to generate sane and clean type definitions from JavaScript files.
 This module provides `pre` and `post` processing helpers to a type definition pipeline, as well as a simple [generator cli](#usage).
 
 
-## Features
-
-Supported constructs:
-
-* ES5 prototypical classes + inheritance
-* Optional parameters before required ones
-
-Additional features:
-
-* Preserves documentation
-* Converts JSDoc to [TSDoc](https://github.com/microsoft/tsdoc)
-
-Checkout the [test fixtures](./test/fixtures) for full coverage.
-
-
 ## Usage
 
 ```sh
 npx bio-dts --outDir dist/types -r lib
 ```
+
+
+## Features
+
+* Generates clean type definitions from ES5 code bases
+* Supports ES5 prototypical classes + inheritance
+* Supports optional parameters before required ones
+* Converts JSDoc to [TSDoc](https://github.com/microsoft/tsdoc)
+
+Checkout the [test fixtures](./test/fixtures) for full coverage.
+
 
 ## API
 
