@@ -6,6 +6,12 @@ All notable changes to [bio-dts](https://github.com/nikku/bio-dts) are documente
 
 _**Note:** Yet to be released changes appear here._
 
+## 0.4.0
+
+* `FEAT`: support optional before non-optional parameters
+* `FEAT`: load local `typescript`
+* `FIX`: correct CLI directory check
+
 ## 0.3.0
 
 * `FEAT`: strip unneeded JSDoc tags
