@@ -42,7 +42,7 @@ describe('transform', function() {
 
     testPostTransform('post/const');
 
-    testPostTransform('post/optional-args', it.skip);
+    testPostTransform('post/optional-args');
 
     testPostTransform('post/jsdoc');
 

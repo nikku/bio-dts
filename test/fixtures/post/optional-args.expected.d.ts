@@ -2,17 +2,40 @@ declare class EventBus {
   constructor();
 
   /**
-   * @param {string}   event
-   * @param {Function} callback
-   * @param {any}      [context]
+   * Good things with events.
+   *
+   * @param event
+   * @param callback
+   * @param context
    */
-  on(event: string, callback: Function, context?: any);
+  on(event: string, callback: Function, context?: any): void;
 
   /**
-   * @param {string}   event
-   * @param {number}   priority
-   * @param {Function} callback
-   * @param {any}      [context]
+   * Good things with events.
+   *
+   * @param event
+   * @param priority
+   * @param callback
+   * @param context
    */
-  on(event: string, priority: number, callback: Function, context?: any);
+  on(event: string, priority: number, callback: Function, context?: any): void;
 }
+
+/**
+ * YO!
+ *
+ * @param event
+ * @param callback
+ * @param context
+ */
+declare function on(event: string, callback: Function, context?: any): void
+
+/**
+ * YO!
+ *
+ * @param event
+ * @param priority
+ * @param callback
+ * @param context
+ */
+declare function on(event: string, priority: number, callback: Function, context?: any): void
