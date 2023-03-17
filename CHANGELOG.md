@@ -6,6 +6,10 @@ All notable changes to [bio-dts](https://github.com/nikku/bio-dts) are documente
 
 _**Note:** Yet to be released changes appear here._
 
+## 0.4.1
+
+* `FIX`: filter `property` from JSDoc comments
+
 ## 0.4.0
 
 * `FEAT`: support optional before non-optional parameters
