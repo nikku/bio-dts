@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import ts from 'typescript';
+import Module from 'node:module';
 
 import glob from 'tiny-glob';
 
@@ -10,6 +10,9 @@ import fs from 'node:fs';
 import generateTypes from '../lib/generate-types.js';
 
 async function run() {
+
+  const ts = getTypescript();
+
   const args = process.argv.slice(2);
 
   const {
@@ -70,6 +73,23 @@ async function run() {
   });
 
   console.log('Done.');
+}
+
+function getTypescript() {
+
+  const cwd = process.cwd();
+
+  const createRequire = Module.createRequire || Module.createRequireFromPath;
+
+  const requireLocal = createRequire(
+    path.join(cwd, '__placeholder__.js')
+  );
+
+  try {
+    return requireLocal('typescript');
+  } catch (err) {
+    throw new Error(`failed to load <typescript> from <${ cwd }>`);
+  }
 }
 
 run().catch(err => {
