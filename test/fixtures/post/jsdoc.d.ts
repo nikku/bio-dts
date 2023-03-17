@@ -13,6 +13,12 @@ export class Foo {
    * @param { A } a
    * @return {boolean}
    */
-  bar(a) {}
+  bar(a: A): boolean
 
+  /**
+   * @param {string} [arg]
+   */
+  woop(arg?: string) {
+
+  }
 }

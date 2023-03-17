@@ -4,6 +4,12 @@ export class Foo {
    * @param a
    * @return
    */
-  bar(a) {}
+  bar(a: A): boolean
 
+  /**
+   * @param arg
+   */
+  woop(arg?: string) {
+
+  }
 }
