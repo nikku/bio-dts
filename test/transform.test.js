@@ -50,6 +50,8 @@ describe('transform', function() {
 
     testPostTransform('post/optional-args-typo');
 
+    testPostTransform('post/optional-args-class-property');
+
     testPostTransform('post/jsdoc');
 
     testPostTransform('post/jsdoc-class');
