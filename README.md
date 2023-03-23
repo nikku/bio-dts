@@ -6,7 +6,9 @@ Utilities to generate sane and clean type definitions from JavaScript files.
 
 ## About
 
-This module provides `pre` and `post` processing helpers to a type definition pipeline, as well as a simple [generator cli](#usage).
+This module provides `pre` and `post` processing helpers to a type definition pipeline.
+
+You can use it [via API](#api) or through a simple [generator cli](#usage).
 
 
 ## Usage
