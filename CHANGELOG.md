@@ -6,6 +6,10 @@ All notable changes to [bio-dts](https://github.com/nikku/bio-dts) are documente
 
 _**Note:** Yet to be released changes appear here._
 
+## 0.5.0
+
+* `FEAT`: support generated class properties
+
 ## 0.4.1
 
 * `FIX`: filter `property` from JSDoc comments
