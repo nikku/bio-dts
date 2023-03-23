@@ -20,6 +20,8 @@ describe('transform', function() {
 
     testPreTransform('pre/exports');
 
+    testPreTransform('pre/generated-fns');
+
     testPreTransform('pre/inheritance');
 
     testPreTransform('pre/inline-method');

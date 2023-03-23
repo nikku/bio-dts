@@ -7,15 +7,16 @@ class Foo {
    * @param {string} a
    * @param {string} b
    */
-  constructor(a, b) {}
+  constructor(a, b) {
 
-  /**
-   * YEA
-   *
-   * @param {string} yea
-   */
-  wooop(yea) {
+    /**
+     * YEA
+     *
+     * @param {string} yea
+     */
+    this.wooop = function(yea) {
 
+    };
   }
 
   /**

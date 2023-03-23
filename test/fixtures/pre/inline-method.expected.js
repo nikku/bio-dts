@@ -1,11 +1,11 @@
 class Foo {
-  constructor() {}
+  constructor() {
+    this.woop = function(a, b) {
+      return a + b;
+    };
 
-  woop(a, b) {
-    return a + b;
-  }
-
-  wap() {
-    return false;
+    this.wap = function() {
+      return false;
+    };
   }
 }
