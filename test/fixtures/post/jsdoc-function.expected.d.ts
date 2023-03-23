@@ -20,7 +20,7 @@ declare function missingParam(): void
  * @param bar
  * @param notRest
  */
-declare function wrongParamName(foo, bar, ...rest): void
+declare function wrongParamName(foo: string, bar: number, ...rest: any[]): void
 
 /**
  * @param foo
