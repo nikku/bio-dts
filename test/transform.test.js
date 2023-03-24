@@ -60,6 +60,8 @@ describe('transform', function() {
 
     testPostTransform('post/private');
 
+    testPostTransform('post/type-exports');
+
   });
 
 });
