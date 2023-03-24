@@ -6,6 +6,11 @@ All notable changes to [bio-dts](https://github.com/nikku/bio-dts) are documente
 
 _**Note:** Yet to be released changes appear here._
 
+## 0.7.0
+
+* `FEAT`: preserve generics when generating overloads
+* `FEAT`: do not export type imports
+
 ## 0.6.1
 
 * `FIX`: correct handling of constructors (`null` return type)
