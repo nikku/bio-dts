@@ -48,6 +48,8 @@ describe('transform', function() {
 
     testPostTransform('post/optional-args-function');
 
+    testPostTransform('post/optional-args-generic');
+
     testPostTransform('post/optional-args-typo');
 
     testPostTransform('post/optional-args-class-property');
