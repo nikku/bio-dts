@@ -25,3 +25,13 @@ export default function exportDefaultWoop(abc: string): void;
  * @param abc
  */
 declare function withThis(this: Number, abc: string): void
+
+/**
+ * @param abc
+ */
+declare function withoutThis(this: Number, abc: string): void
+
+/**
+ * @param foo
+ */
+declare function nestedParamTag(foo: { bar: string }): void
