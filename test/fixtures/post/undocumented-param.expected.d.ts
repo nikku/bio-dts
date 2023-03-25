@@ -35,3 +35,5 @@ declare function withoutThis(this: Number, abc: string): void
  * @param foo
  */
 declare function nestedParamTag(foo: { bar: string }): void
+
+declare function foo(yo: string): void

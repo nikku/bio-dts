@@ -37,3 +37,11 @@ declare function withoutThis(this: Number, abc: string, undoc: any) : void;
  * @param {string} foo.bar
  */
 declare function nestedParamTag(foo: { bar: string }, undoc: any) : void;
+
+/**
+ * @typedef {import('A').B} B
+ *
+ * @typedef {import('A').C} C
+ */
+
+declare function foo(yo: string) : void
