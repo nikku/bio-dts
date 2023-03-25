@@ -50,8 +50,6 @@ describe('transform', function() {
 
     testPostTransform('post/optional-args-generic');
 
-    testPostTransform('post/optional-args-typo');
-
     testPostTransform('post/optional-args-class-property');
 
     testPostTransform('post/jsdoc');
@@ -60,9 +58,43 @@ describe('transform', function() {
 
     testPostTransform('post/jsdoc-function');
 
+    testPostTransform('post/overload');
+
     testPostTransform('post/private');
 
     testPostTransform('post/type-exports');
+
+    testPostTransform('post/undocumented-param');
+
+
+    describe('error handling', function() {
+
+      it('should indicate parameter missing', function() {
+
+        expect(() => {
+          test('post/jsdoc-class-missing-param', postTransform, 'd.ts');
+        }).to.throw(
+          /documented parameter <foo> at index <0> not found/
+        );
+      });
+
+
+      it('should indicate parameter miss-match', function() {
+
+        expect(() => {
+          test('post/optional-args-typo', postTransform, 'd.ts');
+        }).to.throw(
+          /documented parameter <existingClosure> at index <2> differs from actual parameter <closure>/
+        );
+
+        expect(() => {
+          test('post/jsdoc-class-wrong-param', postTransform, 'd.ts');
+        }).to.throw(
+          /documented parameter <notRest> at index <2> differs from actual parameter <rest>/
+        );
+      });
+
+    });
 
   });
 
@@ -79,14 +111,17 @@ function testPostTransform(name, iit = it) {
   testTransform(name, postTransform, 'd.ts', iit);
 }
 
+function test(name, transform, ext) {
+  const actual = transform(readFile(`fixtures/${name}.${ext}`));
+  const expected = readFile(`fixtures/${name}.expected.${ext}`);
+
+  expect(actual).to.eql(expected);
+}
+
 function testTransform(name, transform, ext, iit) {
 
   iit(`should transform <${ name }>`, function() {
-
-    const expected = readFile(`fixtures/${name}.expected.${ext}`);
-    const actual = readFile(`fixtures/${name}.${ext}`);
-
-    expect(transform(actual)).to.eql(expected);
+    test(name, transform, ext);
   });
 
 }
