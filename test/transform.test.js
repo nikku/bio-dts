@@ -74,7 +74,7 @@ describe('transform', function() {
         expect(() => {
           test('post/jsdoc-class-missing-param', postTransform, 'd.ts');
         }).to.throw(
-          /documented parameter <foo> at index <0> not found/
+          /documented parameter <foo> not found \[line 7, column 3\]/
         );
       });
 
@@ -84,13 +84,13 @@ describe('transform', function() {
         expect(() => {
           test('post/optional-args-typo', postTransform, 'd.ts');
         }).to.throw(
-          /documented parameter <existingClosure> at index <2> differs from actual parameter <closure>/
+          /documented parameter <existingClosure> differs from actual parameter <closure> \[line 12, column 1\]/
         );
 
         expect(() => {
           test('post/jsdoc-class-wrong-param', postTransform, 'd.ts');
         }).to.throw(
-          /documented parameter <notRest> at index <2> differs from actual parameter <rest>/
+          /documented parameter <notRest> differs from actual parameter <rest> \[line 9, column 3\]/
         );
       });
 
