@@ -20,10 +20,14 @@ npx bio-dts --outDir dist/types -r lib
 
 ## Features
 
-* Generates clean type definitions from ES5 code bases
-* Supports ES5 prototypical classes + inheritance
-* Supports optional parameters before required ones
+Generates clean type definitions from ES5 code bases:
+
+* ES5 prototypical classes + inheritance
+* Optional parameters before required ones
+* Function overloading (via `@overlord` annotations, actually works!)
 * Converts JSDoc to [TSDoc](https://github.com/microsoft/tsdoc)
+* Only exposed documented parameters
+* Validates, where needed declared parameters
 
 Checkout the [test fixtures](./test/fixtures) for full coverage.
 
