@@ -60,6 +60,37 @@ describe('parsers/jsdoc', function() {
   });
 
 
+  it('should parse @template', function() {
+
+    const str = `
+/**
+ * @template A
+ * @template {Foo} B
+ */`;
+
+    // when
+    const tags = parse(str);
+
+    // then
+    expect(tags).to.eql([
+      {
+        start: 8,
+        name: 'template',
+        param: { start: 18, end: 19, value: 'A', name: 'A' },
+        description: null,
+        end: 19
+      },
+      {
+        start: 23,
+        name: 'template',
+        type: { start: 33, end: 38, value: '{Foo}' },
+        param: { start: 39, end: 40, value: 'B', name: 'B' },
+        description: null,
+        end: 40
+      }
+    ]);
+  });
+
   it('should parse misc', function() {
 
     const str = `
