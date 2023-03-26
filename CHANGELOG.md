@@ -6,6 +6,12 @@ All notable changes to [bio-dts](https://github.com/nikku/bio-dts) are documente
 
 _**Note:** Yet to be released changes appear here._
 
+## 0.8.0
+
+* `FEAT`: clean undocumented arguments
+* `FEAT`: support `@overlord` - a working way to overload JS methods
+* `CHORE`: throw errors with location information
+
 ## 0.7.0
 
 * `FEAT`: preserve generics when generating overloads
