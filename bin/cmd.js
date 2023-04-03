@@ -21,7 +21,9 @@ async function run() {
   } = ts.parseCommandLine(args);
 
   const help = args.includes('--help') || args.includes('-h');
-  const verbose = args.includes('--verbose');
+  const verboseMatch = /--verbose(?:=([^\s$]+))?(\s|$)/.exec(args);
+
+  const verbose = verboseMatch ? verboseMatch[1] || true : false;
   const recursive = args.includes('--recursive') || args.includes('-r');
 
   if (help) {
