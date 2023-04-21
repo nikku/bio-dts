@@ -32,6 +32,8 @@ describe('transform', function() {
 
     testPreTransform('pre/jsdoc-exports');
 
+    testPreTransform('pre/json');
+
     testPreTransform('pre/no-proto');
 
     testPreTransform('pre/private');
@@ -57,6 +59,8 @@ describe('transform', function() {
     testPostTransform('post/jsdoc-class');
 
     testPostTransform('post/jsdoc-function');
+
+    testPostTransform('post/json');
 
     testPostTransform('post/overload');
     testPostTransform('post/overload-method');
