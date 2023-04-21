@@ -60,13 +60,17 @@ async function run() {
 
   console.log(`Generating types for ${files.length} files...`);
 
-  generateTypes(files, {
+  const generateOptions = {
     allowJs: true,
     declaration: true,
     emitDeclarationOnly: true,
     ...options,
     verbose
-  });
+  };
+
+  verbose && console.log('Using options ', generateOptions);
+
+  generateTypes(files, generateOptions);
 
   console.log('Done.');
 }
