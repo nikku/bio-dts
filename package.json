@@ -11,6 +11,10 @@
     "test": "mocha test",
     "test:dts": "node bin/cmd.js --outDir dist -r test/fixtures"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nikku/bio-dts"
+  },
   "author": "Nico Rehwaldt",
   "license": "MIT",
   "dependencies": {
