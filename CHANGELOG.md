@@ -6,6 +6,12 @@ All notable changes to [bio-dts](https://github.com/nikku/bio-dts) are documente
 
 _**Note:** Yet to be released changes appear here._
 
+## 0.8.1
+
+* `FIX`: make `JSDoc` parsing more lenient
+* `CHORE`: add `repository` field ([#1](https://github.com/nikku/bio-dts/pull/1))
+* `CHORE`: log generate arguments in verbose mode
+
 ## 0.8.0
 
 * `FEAT`: clean undocumented arguments
