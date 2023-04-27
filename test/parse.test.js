@@ -120,6 +120,7 @@ describe('parsers/jsdoc', function() {
     const str = `
 /**
  * @param { Foo } [woo=10] SOME TEXT
+ * @param { number } [  waa = 1 ]
  */`;
 
     // when
@@ -144,6 +145,20 @@ describe('parsers/jsdoc', function() {
           value: 'SOME TEXT'
         },
         end: 41
+      },
+      {
+        start: 45,
+        name: 'param',
+        type: { start: 52, end: 62, value: '{ number }' },
+        param: {
+          start: 63,
+          end: 75,
+          value: '[  waa = 1 ]',
+          contents: '  waa = 1 ',
+          name: 'waa'
+        },
+        description: null,
+        end: 75
       }
     ]);
   });

@@ -2,6 +2,14 @@
  * Some method description, o yea!
  *
  * @param event
+ */
+declare function on(event?: number): void
+
+/**
+ *
+ * Some method description, o yea!
+ *
+ * @param event
  * @param obj
  */
 declare function on(event: string, obj?: any): void

@@ -6,10 +6,17 @@
  * @param {any} obj
  */
 /**
+ * @overlord
+ *
  * Some method description, o yea!
  *
  * @param {string} event
  * @param {any} [obj]
+ */
+/**
+ * Some method description, o yea!
+ *
+ * @param {number} [event = 10]
  */
 declare function on(event: string, obj?: any) : void;
 
