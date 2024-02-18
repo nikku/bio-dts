@@ -1,4 +1,4 @@
-import { parse, matcher, path } from '../lib/util.js';
+import { parse, matcher, path } from 'bio-dts/lib/util.js';
 
 import { expect } from 'chai';
 
