@@ -3,8 +3,12 @@
   "version": "0.8.1",
   "description": "Generate sane and clean types from JavaScript sources",
   "type": "module",
-  "main": "index.js",
   "bin": "bin/cmd.js",
+  "exports": {
+    ".": "./index.js",
+    "./lib/*.js": "./lib/*.js",
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "all": "npm run lint && npm run check-types && npm run test && npm run test:dts",
     "lint": "eslint .",

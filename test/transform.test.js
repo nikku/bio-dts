@@ -3,7 +3,7 @@ import { readFile } from './helper.js';
 import {
   preTransform,
   postTransform
-} from '../index.js';
+} from 'bio-dts';
 
 import { expect } from 'chai';
 

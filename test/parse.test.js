@@ -1,7 +1,7 @@
 import {
   parse,
   replace
-} from '../lib/parsers/jsdoc.js';
+} from 'bio-dts/lib/parsers/jsdoc.js';
 
 import {
   expect
