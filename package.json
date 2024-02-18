@@ -1,6 +1,6 @@
 {
   "name": "bio-dts",
-  "version": "0.8.1",
+  "version": "0.9.0",
   "description": "Generate sane and clean types from JavaScript sources",
   "type": "module",
   "bin": "bin/cmd.js",
