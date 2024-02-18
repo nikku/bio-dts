@@ -6,6 +6,11 @@ All notable changes to [bio-dts](https://github.com/nikku/bio-dts) are documente
 
 _**Note:** Yet to be released changes appear here._
 
+## 0.9.0
+
+* `CHORE`: add `exports` field, drop `main` field
+* `CHORE`: internal typing improvements
+
 ## 0.8.1
 
 * `FIX`: make `JSDoc` parsing more lenient
