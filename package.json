@@ -6,8 +6,9 @@
   "main": "index.js",
   "bin": "bin/cmd.js",
   "scripts": {
-    "all": "npm run lint && npm run test && npm run test:dts",
+    "all": "npm run lint && npm run check-types && npm run test && npm run test:dts",
     "lint": "eslint .",
+    "check-types": "tsc --noEmit",
     "test": "mocha test",
     "test:dts": "node bin/cmd.js --outDir dist -r test/fixtures"
   },
@@ -23,11 +24,14 @@
     "tiny-glob": "^0.2.9"
   },
   "devDependencies": {
-    "chai": "^4.3.7",
+    "@babel/types": "^7.23.9",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.19",
+    "chai": "^5.1.0",
     "eslint": "^8.36.0",
     "eslint-plugin-bpmn-io": "^1.0.0",
     "mocha": "^10.2.0",
-    "typescript": "^5.0.2"
+    "typescript": "^5.3.3"
   },
   "files": [
     "bin",
