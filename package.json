@@ -23,7 +23,7 @@
   "author": "Nico Rehwaldt",
   "license": "MIT",
   "dependencies": {
-    "@babel/parser": "^7.21.2",
+    "@babel/parser": "^7.23.9",
     "recast": "^0.23.4",
     "tiny-glob": "^0.2.9"
   },
