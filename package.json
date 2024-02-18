@@ -10,7 +10,7 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "all": "npm run lint && npm run check-types && npm run test && npm run test:dts",
+    "all": "run-s lint check-types test test:dts",
     "lint": "eslint .",
     "check-types": "tsc --noEmit",
     "test": "mocha test",
@@ -35,6 +35,7 @@
     "eslint": "^8.56.0",
     "eslint-plugin-bpmn-io": "^1.0.0",
     "mocha": "^10.2.0",
+    "npm-run-all2": "^6.1.2",
     "typescript": "^5.3.3"
   },
   "files": [
