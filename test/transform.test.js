@@ -61,6 +61,7 @@ describe('transform', function() {
     testPostTransform('post/overload');
     testPostTransform('post/overload-method');
     testPostTransform('post/overload-class-property');
+    testPostTransform('post/overload-optional-args');
 
     testPostTransform('post/private');
 
