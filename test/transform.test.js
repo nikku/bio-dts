@@ -109,6 +109,18 @@ function testPreTransform(name, iit = it) {
   testTransform(name, preTransform, 'js', iit);
 }
 
+/**
+ * @typedef { (
+ *   import('mocha').TestFunction |
+ *   import('mocha').ExclusiveTestFunction |
+ *   import('mocha').PendingTestFunction
+ * ) } TestFunction
+ */
+
+/**
+ * @param {string} name
+ * @param {TestFunction} iit
+ */
 function testPostTransform(name, iit = it) {
   testTransform(name, postTransform, 'd.ts', iit);
 }
