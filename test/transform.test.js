@@ -69,6 +69,9 @@ describe('transform', function() {
 
     testPostTransform('post/undocumented-param');
 
+    testPostTransform('post/comments');
+    testPostTransform('post/comments-source-map');
+
 
     describe('error handling', function() {
 
