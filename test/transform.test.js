@@ -109,10 +109,6 @@ describe('transform', function() {
 
 // helpers //////////////////
 
-function testPreTransform(name, iit = it) {
-  testTransform(name, preTransform, 'js', iit);
-}
-
 /**
  * @typedef { (
  *   import('mocha').TestFunction |
@@ -120,6 +116,14 @@ function testPreTransform(name, iit = it) {
  *   import('mocha').PendingTestFunction
  * ) } TestFunction
  */
+
+/**
+ * @param {string} name
+ * @param {TestFunction} iit
+ */
+function testPreTransform(name, iit = it) {
+  testTransform(name, preTransform, 'js', iit);
+}
 
 /**
  * @param {string} name
