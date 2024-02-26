@@ -15,10 +15,20 @@ class CommandInterceptor {
  *
  * @param {string} lifeCycle
  *
- * @return {(this: CommandInterceptor, ...args: any[]) => any} interceptor method
+ * @return {(name: string) => any} interceptor method
  */
 function createHook(lifeCycle) {
-  return () => {
+
+  /**
+   * @this {CommandInterceptor}
+   *
+   * @param {string} name
+   *
+   * @returns {any}
+   */
+  const hookFn = () => {
     return null;
   };
+
+  return hookFn;
 }
