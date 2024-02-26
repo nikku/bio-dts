@@ -6,6 +6,10 @@ All notable changes to [bio-dts](https://github.com/nikku/bio-dts) are documente
 
 _**Note:** Yet to be released changes appear here._
 
+## 0.11.0
+
+* `FEAT`: preserve comment style and position ([#4](https://github.com/nikku/bio-dts/pull/4))
+
 ## 0.10.0
 
 * `FEAT`: apply transforms additive
