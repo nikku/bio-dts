@@ -104,6 +104,49 @@ describe('transform', function() {
 
   });
 
+
+  describe('sourcemap', function() {
+
+    it('pre', function() {
+
+      // given
+      const fileName = 'fixtures/pre/basic.js';
+      const src = readFile(fileName);
+
+      // when
+      const transformed = preTransform(src, {
+        inputSourceMap: null,
+        sourceFileName: fileName,
+        sourceMapName: fileName.slice(0, -2) + '.pre.js',
+        sourceRoot: process.cwd()
+      });
+
+      // then
+      expect(transformed.code).to.exist;
+      expect(transformed.map).to.exist;
+    });
+
+
+    it('post', function() {
+
+      // given
+      const fileName = 'fixtures/post/jsdoc.d.ts';
+      const src = readFile(fileName);
+
+      // when
+      const transformed = postTransform(src, {
+        sourceFileName: fileName,
+        sourceMapName: fileName.slice(0, -4) + '.post.d.ts',
+        sourceRoot: process.cwd()
+      });
+
+      // then
+      expect(transformed.code).to.exist;
+      expect(transformed.map).to.exist;
+    });
+
+  });
+
 });
 
 
@@ -134,10 +177,10 @@ function testPostTransform(name, iit = it) {
 }
 
 function test(name, transform, ext) {
-  const actual = transform(readFile(`fixtures/${name}.${ext}`));
+  const transformed = transform(readFile(`fixtures/${name}.${ext}`));
   const expected = readFile(`fixtures/${name}.expected.${ext}`);
 
-  expect(actual).to.eql(expected);
+  expect(transformed.code).to.eql(expected);
 }
 
 function testTransform(name, transform, ext, iit) {
