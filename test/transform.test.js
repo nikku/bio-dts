@@ -27,9 +27,7 @@ describe('transform', function() {
     testPreTransform('pre/inline-method');
 
     testPreTransform('pre/jsdoc');
-
     testPreTransform('pre/jsdoc-multi-comments');
-
     testPreTransform('pre/jsdoc-exports');
 
     testPreTransform('pre/no-proto');
@@ -45,17 +43,12 @@ describe('transform', function() {
     testPostTransform('post/const');
 
     testPostTransform('post/optional-args-class');
-
     testPostTransform('post/optional-args-function');
-
     testPostTransform('post/optional-args-generic');
-
     testPostTransform('post/optional-args-class-property');
 
     testPostTransform('post/jsdoc');
-
     testPostTransform('post/jsdoc-class');
-
     testPostTransform('post/jsdoc-function');
 
     testPostTransform('post/overload');
