@@ -100,23 +100,26 @@ describe('transform', function() {
 
   describe('sourcemap', function() {
 
-    it('pre', function() {
+    describe('pre', function() {
 
-      // given
-      const fileName = 'fixtures/pre/basic.js';
-      const src = readFile(fileName);
+      it('basic', function() {
 
-      // when
-      const transformed = preTransform(src, {
-        inputSourceMap: null,
-        sourceFileName: fileName,
-        sourceMapName: fileName.slice(0, -2) + '.pre.js',
-        sourceRoot: process.cwd()
+        // given
+        const fileName = 'fixtures/pre/basic.js';
+        const src = readFile(fileName);
+
+        // when
+        const transformed = preTransform(src, {
+          inputSourceMap: null,
+          sourceFileName: fileName,
+          sourceMapName: fileName.slice(0, -2) + '.pre.js',
+          sourceRoot: process.cwd()
+        });
+
+        expect(transformed.code).to.exist;
+        expect(transformed.map).to.exist;
       });
 
-      // then
-      expect(transformed.code).to.exist;
-      expect(transformed.map).to.exist;
     });
 
 

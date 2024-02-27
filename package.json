@@ -14,7 +14,7 @@
     "lint": "eslint .",
     "check-types": "tsc --noEmit",
     "test": "mocha test",
-    "test:dts": "node bin/cmd.js --declarationMap --outDir dist -r test/fixtures/pre/generated-fns.js"
+    "test:dts": "node bin/cmd.js --declarationMap --outDir dist -r test/fixtures"
   },
   "repository": {
     "type": "git",
