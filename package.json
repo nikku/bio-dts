@@ -14,7 +14,7 @@
     "lint": "eslint .",
     "check-types": "tsc --noEmit",
     "test": "mocha test",
-    "test:dts": "node bin/cmd.js --outDir dist -r test/fixtures"
+    "test:dts": "node bin/cmd.js --outDir test/fixtures/snapshots -r test/fixtures"
   },
   "repository": {
     "type": "git",
