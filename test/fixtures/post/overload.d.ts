@@ -1,9 +1,9 @@
 /**
  * @overlord
  *
- * Some other method description, o yea!
+ * Some method description, o yea!
  *
- * @param {any} obj
+ * @param {number} [event = 10]
  */
 /**
  * @overlord
@@ -14,18 +14,17 @@
  * @param {any} [obj]
  */
 /**
- * Some method description, o yea!
+ * Some other method description, o yea!
  *
- * @param {number} [event = 10]
+ * @param {any} obj
  */
 declare function on(event: string, obj?: any) : void;
 
 /**
  * @overlord
  *
- * @template X
- * @param {boolean} c
- * @return { [ string, { foo: 'bar' }, X ] }
+ * @param {string} a
+ * @return {string}
  */
 /**
  * @overlord
@@ -34,23 +33,23 @@ declare function on(event: string, obj?: any) : void;
  * @return { Y }
  */
 /**
- * @param {string} a
- * @return {string}
+ * @template X
+ * @param {boolean} c
+ * @return { [ string, { foo: 'bar' }, X ] }
  */
 declare function ret(a: string) : string;
-
 
 /**
  * @overlord
  *
- * Some other method description, o yea!
- *
- * @param {any} obj
- */
-/**
  * Some method description, o yea!
  *
  * @param {string} event
  * @param {any} [obj]
+ */
+/**
+ * Some other method description, o yea!
+ *
+ * @param {any} obj
  */
 export function exportOn(event: string, obj?: any) : void;

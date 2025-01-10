@@ -1,5 +1,6 @@
 declare class Foo {
   /**
+   *
    * Some method description, o yea!
    *
    * @param event
@@ -8,7 +9,6 @@ declare class Foo {
   on(event: string, obj?: any): void;
 
   /**
-   *
    * Some other method description, o yea!
    *
    * @param obj
