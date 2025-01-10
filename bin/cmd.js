@@ -21,9 +21,9 @@ async function run() {
   } = ts.parseCommandLine(args);
 
   const help = args.includes('--help') || args.includes('-h');
-  const verboseMatch = /--verbose(?:=([^\s$]+))?(\s|$)/.exec(args);
+  const [ _verbose, _verboseGrep ] = args.flatMap(arg => /^--verbose(?:=(.*))?$/.exec(arg) || []);
 
-  const verbose = verboseMatch ? verboseMatch[1] || true : false;
+  const verbose = _verbose ? _verboseGrep || true : false;
   const recursive = args.includes('--recursive') || args.includes('-r');
 
   if (help) {
