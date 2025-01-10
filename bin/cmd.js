@@ -70,7 +70,7 @@ async function run() {
 
   verbose && console.log('Using options ', generateOptions);
 
-  generateTypes(files, generateOptions);
+  generateTypes(files, generateOptions, ts);
 
   console.log('Done.');
 }
