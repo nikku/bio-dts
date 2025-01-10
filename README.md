@@ -34,7 +34,7 @@ Checkout the [test fixtures](./test/fixtures) for full coverage.
 
 ## API
 
-```javascript
+```js
 import {
   preTransform,
   postTransform,
