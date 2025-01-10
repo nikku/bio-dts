@@ -34,6 +34,8 @@ describe('transform', function() {
 
     testPreTransform('pre/no-proto');
 
+    testPreTransform('pre/overload');
+
     testPreTransform('pre/private');
 
     testPreTransform('pre/static');
@@ -57,6 +59,8 @@ describe('transform', function() {
     testPostTransform('post/jsdoc-class');
 
     testPostTransform('post/jsdoc-function');
+
+    testPostTransform('post/overload');
 
     testPostTransform('post/overlord');
     testPostTransform('post/overlord-method');
