@@ -58,10 +58,10 @@ describe('transform', function() {
 
     testPostTransform('post/jsdoc-function');
 
-    testPostTransform('post/overload');
-    testPostTransform('post/overload-method');
-    testPostTransform('post/overload-class-property');
-    testPostTransform('post/overload-optional-args');
+    testPostTransform('post/overlord');
+    testPostTransform('post/overlord-method');
+    testPostTransform('post/overlord-class-property');
+    testPostTransform('post/overlord-optional-args');
 
     testPostTransform('post/private');
 
