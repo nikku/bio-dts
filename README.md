@@ -41,6 +41,8 @@ import {
   generateTypes
 } from 'bio-dts';
 
+import * as typescript from 'typescript';
+
 // transform JS so it keeps the shape,
 // but is properly digestable by the typescript
 // compiler
@@ -54,5 +56,5 @@ const transformedCode = postTransform(tsCode);
 // typescript compiler
 generateTypes(files, {
   outDir: 'dist'
-});
+}, typescript);
 ```
