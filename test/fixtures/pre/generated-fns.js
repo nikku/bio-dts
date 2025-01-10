@@ -1,5 +1,5 @@
 
-function CommandInterceptor() { }
+export function CommandInterceptor() { }
 
 /**
  * Add prototype method for a specific phase of command execution.
