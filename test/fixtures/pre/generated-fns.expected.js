@@ -1,5 +1,5 @@
 
-class CommandInterceptor {
+export class CommandInterceptor {
   constructor() { }
 
   /**
