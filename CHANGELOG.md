@@ -6,6 +6,21 @@ All notable changes to [bio-dts](https://github.com/nikku/bio-dts) are documente
 
 _**Note:** Yet to be released changes appear here._
 
+## 0.12.0
+
+* `FEAT`: generate declarations for `@overlord` annoted functions in definition order ([#6](https://github.com/nikku/bio-dts/pull/6))
+* `FEAT`: consistently use locally provided TypeScript ([#9](https://github.com/nikku/bio-dts/pull/9))
+* `FEAT`: indicate TypeScript generation errors ([`be45fe8`](https://github.com/nikku/bio-dts/commit/be45fe884f018674f985c90735eef1838bb65330))
+* `FIX`: improve `verbose` behavior ([#10](https://github.com/nikku/bio-dts/pull/10))
+* `CHORE`: verify compatibility with TypeScript `@overload` annotations ([#13](https://github.com/nikku/bio-dts/pull/13))
+* `DEPS`: update to `@babel/parser@7.26.3`
+* `DEPS`: update to `recast@0.23.9`
+
+### Breaking Changes
+
+* `generateTypes` helper now requires you to explicitly pass the TypeScript instance used ([#9](https://github.com/nikku/bio-dts/pull/9))
+* Declarations for overloaded functions are now generated in definition order ([#6](https://github.com/nikku/bio-dts/pull/6))
+
 ## 0.11.0
 
 * `FEAT`: preserve comment style and position ([#4](https://github.com/nikku/bio-dts/pull/4))
