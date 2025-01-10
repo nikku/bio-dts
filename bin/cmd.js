@@ -5,6 +5,7 @@ import Module from 'node:module';
 import glob from 'tiny-glob';
 
 import path from 'node:path';
+import os from 'node:os';
 import fs from 'node:fs';
 
 import generateTypes from '../lib/generate-types.js';
@@ -70,9 +71,40 @@ async function run() {
 
   verbose && console.log('Using options ', generateOptions);
 
-  generateTypes(files, generateOptions, ts);
+  const {
+    diagnostics
+  } = generateTypes(files, generateOptions, ts);
+
+  const errors = diagnostics.filter(d => d.category === ts.DiagnosticCategory.Error);
+
+  if (errors.length) {
+
+    const formatHost = {
+      getNewLine() {
+        return os.EOL;
+      },
+
+      getCurrentDirectory() {
+        return process.cwd();
+      },
+
+      getCanonicalFileName(fileName) {
+        return fileName;
+      }
+    };
+
+    console.log('Done with errors:');
+    console.log();
+    console.log(
+      ts.formatDiagnosticsWithColorAndContext(errors, formatHost)
+    );
+
+    return 5;
+  }
 
   console.log('Done.');
+
+  return 0;
 }
 
 function isDir(fileName) {
@@ -103,7 +135,9 @@ function getTypescript() {
   }
 }
 
-run().catch(err => {
+run().then(errorCode => {
+  process.exit(errorCode);
+}, err => {
   console.error(err);
 
   process.exit(1);
