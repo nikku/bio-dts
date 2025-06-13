@@ -10,11 +10,11 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "all": "run-s lint check-types test test:dts",
+    "all": "run-s lint check-types test test:dts:*",
     "lint": "eslint .",
     "check-types": "tsc --noEmit",
     "test": "mocha test",
-    "test:dts": "node bin/cmd.js --outDir test/fixtures/snapshots -r test/fixtures"
+    "test:dts:default": "node bin/cmd.js --outDir test/fixtures/snapshots/default -r test/fixtures"
   },
   "repository": {
     "type": "git",
