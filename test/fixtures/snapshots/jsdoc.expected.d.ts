@@ -21,6 +21,13 @@ declare class Foo {
      */
     wooop: (yea: string) => void;
     /**
+     * @param options
+     */
+    waap: ({ foo, bar }: {
+        foo: number;
+        bar: string;
+    }) => void;
+    /**
      * Not sour
      *
      * @param n

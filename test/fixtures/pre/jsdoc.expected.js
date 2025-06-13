@@ -17,6 +17,13 @@ class Foo {
     this.wooop = function(yea) {
 
     };
+
+    /**
+     * @param { { foo: number, bar: string } } options
+     */
+    this.waap = function({ foo, bar }) {
+
+    };
   }
 
   /**
