@@ -6,6 +6,11 @@ All notable changes to [bio-dts](https://github.com/nikku/bio-dts) are documente
 
 _**Note:** Yet to be released changes appear here._
 
+## 0.13.0
+
+* `FEAT`: support [declaration maps](https://www.typescriptlang.org/tsconfig/declarationMap.html) ([#15](https://github.com/nikku/bio-dts/pull/15))
+* `FEAT`: support annonymous (destructured) arguments ([#14](https://github.com/nikku/bio-dts/pull/14))
+
 ## 0.12.0
 
 * `FEAT`: generate declarations for `@overlord` annoted functions in definition order ([#6](https://github.com/nikku/bio-dts/pull/6))
