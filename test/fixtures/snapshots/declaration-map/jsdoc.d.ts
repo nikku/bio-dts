@@ -6,7 +6,6 @@ declare class Foo {
     /**
      * Static variable!
      *
-     * @type {boolean}
      */
     static bar: boolean;
     /**
