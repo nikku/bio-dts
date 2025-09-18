@@ -18,6 +18,8 @@ describe('transform', function() {
 
     testPreTransform('pre/const');
 
+    testPreTransform('pre/class-detection');
+
     testPreTransform('pre/exports');
 
     testPreTransform('pre/generated-fns');
