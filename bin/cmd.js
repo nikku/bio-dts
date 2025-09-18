@@ -26,12 +26,14 @@ async function run() {
 
   const verbose = _verbose ? _verboseGrep || true : false;
   const recursive = args.includes('--recursive') || args.includes('-r');
+  const lax = args.includes('--lax');
 
   if (help) {
     console.log(`Usage: bio-dts [options] [...filesOrGlobs]
 
   Options:
     --recursive, -r    recurse into directories
+    --lax              relax certain checks (when running on generated code)
     --verbose          enable verbose logging
 
     Additional options will be passed to the typescript generator.
@@ -73,7 +75,7 @@ async function run() {
 
   const {
     diagnostics
-  } = generateTypes(files, generateOptions, ts);
+  } = generateTypes(files, generateOptions, ts, { lax });
 
   const errors = diagnostics.filter(d => d.category === ts.DiagnosticCategory.Error);
 
