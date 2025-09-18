@@ -25,12 +25,12 @@
   "author": "Nico Rehwaldt",
   "license": "MIT",
   "dependencies": {
-    "@babel/parser": "^7.26.3",
+    "@babel/parser": "^7.28.4",
     "recast": "^0.23.9",
     "tiny-glob": "^0.2.9"
   },
   "devDependencies": {
-    "@babel/types": "^7.23.9",
+    "@babel/types": "^7.28.4",
     "@types/mocha": "^10.0.10",
     "@types/node": "^20.17.12",
     "chai": "^5.1.2",
