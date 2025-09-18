@@ -41,6 +41,15 @@ describe('transform', function() {
     testPreTransform('pre/private');
 
     testPreTransform('pre/static');
+
+    testPreTransform('jsx/functional-component', {
+      parseOptions: { jsx: true }
+    });
+
+    testPreTransform('jsx/class-component', {
+      parseOptions: { jsx: true }
+    });
+
   });
 
 
@@ -84,7 +93,7 @@ describe('transform', function() {
       it('should indicate parameter missing', function() {
 
         expect(() => {
-          test('post/jsdoc-class-missing-param', postTransform, 'd.ts');
+          test('post/jsdoc-class-missing-param', 'd.ts', postTransform);
         }).to.throw(
           /documented parameter <foo> not found \[line 7, column 3\]/
         );
@@ -94,15 +103,25 @@ describe('transform', function() {
       it('should indicate parameter miss-match', function() {
 
         expect(() => {
-          test('post/optional-args-typo', postTransform, 'd.ts');
+          test('post/optional-args-typo', 'd.ts', postTransform);
         }).to.throw(
           /documented parameter <existingClosure> differs from actual parameter <closure> \[line 12, column 1\]/
         );
 
         expect(() => {
-          test('post/jsdoc-class-wrong-param', postTransform, 'd.ts');
+          test('post/jsdoc-class-wrong-param', 'd.ts', postTransform);
         }).to.throw(
           /documented parameter <notRest> differs from actual parameter <rest> \[line 9, column 3\]/
+        );
+      });
+
+
+      it('should fail to parse JSX without explicit configuration', function() {
+
+        expect(() => {
+          test('jsx/functional-component', 'js', preTransform);
+        }).to.throw(
+          /Unexpected token, /
         );
       });
 
@@ -125,31 +144,39 @@ describe('transform', function() {
 
 /**
  * @param {string} name
- * @param {TestFunction} iit
+ * @param { {
+ *   it?: TestFunction,
+ *   parseOptions?: { jsx: boolean }
+ * } } [options]
  */
-function testPreTransform(name, iit = it) {
-  testTransform(name, preTransform, 'js', iit);
+function testPreTransform(name, options) {
+  testTransform(name, 'js', preTransform, options);
 }
 
 /**
  * @param {string} name
- * @param {TestFunction} iit
+ * @param { {
+ *   it?: TestFunction
+ * } } [options]
  */
-function testPostTransform(name, iit = it) {
-  testTransform(name, postTransform, 'd.ts', iit);
+function testPostTransform(name, options) {
+  testTransform(name, 'd.ts', postTransform, options);
 }
 
-function test(name, transform, ext) {
-  const actual = transform(readFile(`fixtures/${name}.${ext}`));
+function test(name, ext, transform, parseOptions) {
+  const actual = transform(readFile(`fixtures/${name}.${ext}`), parseOptions);
   const expected = readFile(`fixtures/${name}.expected.${ext}`);
 
   expect(actual).to.eql(expected);
 }
 
-function testTransform(name, transform, ext, iit) {
+function testTransform(name, ext, transform, options) {
+
+  const iit = options?.it || it;
+  const parseOptions = options?.parseOptions || undefined;
 
   iit(`should transform <${ name }>`, function() {
-    test(name, transform, ext);
+    test(name, ext, transform, parseOptions);
   });
 
 }
