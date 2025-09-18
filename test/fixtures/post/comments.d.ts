@@ -5,6 +5,16 @@
 /* */
 //
 
+/**
+ * @template { string } T
+ */
+declare class Bar<T> {}
+
+/**
+ * @class Foo
+ * @extends { Bar<'foo'> }
+ */
+declare class Foo extends Bar<'foo'> {}
 
 /** @type { number } */
 declare const foo = 1;
