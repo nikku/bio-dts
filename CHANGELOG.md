@@ -6,6 +6,10 @@ All notable changes to [bio-dts](https://github.com/nikku/bio-dts) are documente
 
 _**Note:** Yet to be released changes appear here._
 
+## 0.14.0
+
+* `FEAT`: be able to relax type checks when working with generated sources ([#16](https://github.com/nikku/bio-dts/pull/16))
+
 ## 0.13.0
 
 * `FEAT`: support [declaration maps](https://www.typescriptlang.org/tsconfig/declarationMap.html) ([#15](https://github.com/nikku/bio-dts/pull/15))
