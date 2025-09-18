@@ -6,6 +6,13 @@ All notable changes to [bio-dts](https://github.com/nikku/bio-dts) are documente
 
 _**Note:** Yet to be released changes appear here._
 
+## 0.15.0
+
+* `FEAT`: add ability to generate declarations from `jsx` code ([#17](https://github.com/nikku/bio-dts/issues/17), [#22](https://github.com/nikku/bio-dts/pull/22))
+* `FEAT`: clean `@extends` and `@type` JSDoc tags ([#20](https://github.com/nikku/bio-dts/pull/20))
+* `FEAT`: clean `@function` JSDoc tag ([#21](https://github.com/nikku/bio-dts/pull/21))
+* `FEAT`: improve class component check ([#21](https://github.com/nikku/bio-dts/pull/21))
+
 ## 0.14.0
 
 * `FEAT`: be able to relax type checks when working with generated sources ([#16](https://github.com/nikku/bio-dts/pull/16))
