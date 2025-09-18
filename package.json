@@ -14,8 +14,9 @@
     "lint": "eslint .",
     "check-types": "tsc --noEmit",
     "test": "mocha test",
-    "test:dts:default": "node bin/cmd.js --outDir test/fixtures/snapshots/default -r test/fixtures",
-    "test:dts:declaration-map": "node bin/cmd.js --declarationMap --outDir test/fixtures/snapshots/declaration-map -r test/fixtures"
+    "test:dts:default": "node bin/cmd.js --outDir test/fixtures/snapshots/default -r test/fixtures/pre",
+    "test:dts:declaration-map": "node bin/cmd.js --declarationMap --outDir test/fixtures/snapshots/declaration-map -r test/fixtures/pre",
+    "test:dts:lax": "node bin/cmd.js --declarationMap --lax --outDir test/fixtures/snapshots/lax -r test/fixtures/lax"
   },
   "repository": {
     "type": "git",
