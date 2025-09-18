@@ -6,6 +6,11 @@
 //
 
 /**
+ * @function
+ */
+declare function blub(): boolean
+
+/**
  * @template { string } T
  */
 declare class Bar<T> {}
