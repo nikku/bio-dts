@@ -58,3 +58,8 @@ generateTypes(files, {
   outDir: 'dist'
 }, typescript);
 ```
+
+
+## License
+
+MIT
