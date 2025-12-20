@@ -3,7 +3,7 @@
   "version": "0.14.0",
   "description": "Generate sane and clean types from JavaScript sources",
   "type": "module",
-  "bin": "bin/cmd.js",
+  "bin": "./bin/cmd.js",
   "main": "./index.js",
   "exports": {
     ".": "./index.js",
