@@ -42,6 +42,7 @@
     "npm-run-all2": "^8.0.4",
     "typescript": "^5.9.3"
   },
+  "sideEffects": false,
   "files": [
     "bin",
     "lib",
