@@ -4,6 +4,7 @@
   "description": "Generate sane and clean types from JavaScript sources",
   "type": "module",
   "bin": "bin/cmd.js",
+  "main": "./index.js",
   "exports": {
     ".": "./index.js",
     "./lib/*.js": "./lib/*.js",
