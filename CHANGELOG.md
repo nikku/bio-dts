@@ -6,6 +6,12 @@ All notable changes to [bio-dts](https://github.com/nikku/bio-dts) are documente
 
 _**Note:** Yet to be released changes appear here._
 
+## 0.14.1
+
+* `DEPS`: update to `@babel/parser@7.28.5`
+* `CHORE`: restore `main` export
+* `CHORE`: mark as side effect free
+
 ## 0.14.0
 
 * `FEAT`: add ability to generate declarations from `jsx` code ([#17](https://github.com/nikku/bio-dts/issues/17), [#22](https://github.com/nikku/bio-dts/pull/22))
