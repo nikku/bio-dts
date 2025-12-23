@@ -46,11 +46,11 @@ import * as typescript from 'typescript';
 // transform JS so it keeps the shape,
 // but is properly digestable by the typescript
 // compiler
-const transformedCode = preTransform(jsCode);
+const { code } = preTransform(jsCode);
 
 // post process typescript compiler type code
 // removing internals, and fixing up the definitions
-const transformedCode = postTransform(tsCode);
+const { code } = postTransform(tsCode);
 
 // execute the full pipeline, including invoking the
 // typescript compiler
