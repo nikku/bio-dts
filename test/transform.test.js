@@ -93,7 +93,7 @@ describe('transform', function() {
       it('should indicate parameter missing', function() {
 
         expect(() => {
-          test('post/jsdoc-class-missing-param', 'd.ts', postTransform);
+          run('post/jsdoc-class-missing-param', 'd.ts', postTransform);
         }).to.throw(
           /documented parameter <foo> not found \[line 7, column 3\]/
         );
@@ -103,13 +103,13 @@ describe('transform', function() {
       it('should indicate parameter miss-match', function() {
 
         expect(() => {
-          test('post/optional-args-typo', 'd.ts', postTransform);
+          run('post/optional-args-typo', 'd.ts', postTransform);
         }).to.throw(
           /documented parameter <existingClosure> differs from actual parameter <closure> \[line 12, column 1\]/
         );
 
         expect(() => {
-          test('post/jsdoc-class-wrong-param', 'd.ts', postTransform);
+          run('post/jsdoc-class-wrong-param', 'd.ts', postTransform);
         }).to.throw(
           /documented parameter <notRest> differs from actual parameter <rest> \[line 9, column 3\]/
         );
@@ -119,7 +119,7 @@ describe('transform', function() {
       it('should fail to parse JSX without explicit configuration', function() {
 
         expect(() => {
-          test('jsx/functional-component', 'js', preTransform);
+          run('jsx/functional-component', 'js', preTransform);
         }).to.throw(
           /Unexpected token, /
         );
@@ -163,7 +163,7 @@ function testPostTransform(name, options) {
   testTransform(name, 'd.ts', postTransform, options);
 }
 
-function test(name, ext, transform, parseOptions) {
+function run(name, ext, transform, parseOptions) {
   const actual = transform(readFile(`fixtures/${name}.${ext}`), parseOptions);
   const expected = readFile(`fixtures/${name}.expected.${ext}`);
 
@@ -176,7 +176,7 @@ function testTransform(name, ext, transform, options) {
   const parseOptions = options?.parseOptions || undefined;
 
   iit(`should transform <${ name }>`, function() {
-    test(name, ext, transform, parseOptions);
+    run(name, ext, transform, parseOptions);
   });
 
 }
