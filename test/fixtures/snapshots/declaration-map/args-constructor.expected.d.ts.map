@@ -1,1 +1,1 @@
-{"version":3,"file":"args-constructor.expected.d.ts","sourceRoot":"","sources":["../../pre/args-constructor.expected.js"],"names":[],"mappings":"AACA;IACE,4BAGC;IAFC,OAAU;IACV,OAAU;CAEb"}
+{"version":3,"file":"test/fixtures/snapshots/declaration-map/args-constructor.expected.d.ts","mappings":"AACA;IACE;IACE;IACA","names":[],"ignoreList":[],"sources":["test/fixtures/pre/args-constructor.expected.js"],"sourcesContent":["\nclass Foo {\n  constructor(a, b) {\n    this.a = a;\n    this.b = b;\n  }\n}"]}

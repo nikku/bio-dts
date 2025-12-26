@@ -18,7 +18,7 @@
     "test:dts:default": "node bin/cmd.js --outDir test/fixtures/snapshots/default -r test/fixtures/pre",
     "test:dts:jsx": "node bin/cmd.js --jsx preserve --outDir test/fixtures/snapshots/jsx -r test/fixtures/jsx",
     "test:dts:declaration-map": "node bin/cmd.js --declarationMap --outDir test/fixtures/snapshots/declaration-map -r test/fixtures/pre",
-    "test:dts:lax": "node bin/cmd.js --declarationMap --lax --outDir test/fixtures/snapshots/lax -r test/fixtures/lax"
+    "test:dts:lax": "node bin/cmd.js --declarationMap --sourceMap --inlineSources --lax --outDir test/fixtures/snapshots/lax -r test/fixtures/lax"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   "author": "Nico Rehwaldt",
   "license": "MIT",
   "dependencies": {
+    "@ampproject/remapping": "^2.3.0",
     "@babel/parser": "^7.28.5",
     "recast": "^0.23.11",
     "tiny-glob": "^0.2.9"

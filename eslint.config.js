@@ -2,7 +2,8 @@ import bpmnIoPlugin from 'eslint-plugin-bpmn-io';
 
 const files = {
   ignored: [
-    'test/fixtures'
+    'test/fixtures',
+    'dist'
   ],
   test: [
     'test/**/*.js'

@@ -1,1 +1,1 @@
-{"version":3,"file":"Bar.d.ts","sourceRoot":"","sources":["../../pre/Bar.js"],"names":[],"mappings":"AAAA;CAA4B"}
+{"version":3,"file":"test/fixtures/snapshots/declaration-map/Bar.d.ts","mappings":"AAAA","names":[],"ignoreList":[],"sources":["test/fixtures/pre/Bar.js"],"sourcesContent":["export default class Bar { }"]}

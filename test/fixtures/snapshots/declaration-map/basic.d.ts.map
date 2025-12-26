@@ -1,1 +1,1 @@
-{"version":3,"file":"basic.d.ts","sourceRoot":"","sources":["../../pre/basic.js"],"names":[],"mappings":"AAAA;IAEI,YAAa;IAGf,eAEC;CACF"}
+{"version":3,"file":"test/fixtures/snapshots/declaration-map/basic.d.ts","mappings":";IACE;IAGY","names":[],"ignoreList":[],"sources":["test/fixtures/pre/basic.js"],"sourcesContent":["function Foo() {\n  this.bar = 10\n}\n\nFoo.prototype.woop = function() {\n  return 10;\n};"]}
