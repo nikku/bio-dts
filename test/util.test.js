@@ -120,6 +120,199 @@ describe('util', function() {
     });
 
 
+    it('should find named class', function() {
+
+      // given
+      const clsMatcher = matcher`
+        class Foo {
+          $$$
+        }
+      `;
+
+      const ast = parse(`
+        class Foo {
+
+          constructor() {
+            this.bar = bar;
+          }
+        }
+      `);
+
+      const body = path(ast.program).get('body');
+
+      const clsNode = body.get(0);
+
+      // when
+      const matches = clsMatcher(body);
+
+      // then
+      expect(matches).to.have.length(1);
+
+      expect(matches[0][0]).to.equal(clsNode);
+    });
+
+
+    it('should match class body', function() {
+
+      // given
+      const clsMatcher = matcher`
+        class Foo {
+          $$1
+        }
+      `;
+
+      const ast = parse(`
+        class Foo {
+
+          constructor() {
+            this.bar = bar;
+          }
+        }
+      `);
+
+      const body = path(ast.program).get('body');
+
+      const clsNode = body.get(0);
+      const clsBody = clsNode.get('body', 'body');
+
+      // when
+      const matches = clsMatcher(body);
+
+      // then
+      expect(matches).to.have.length(1);
+
+      expect(matches[0][0]).to.equal(clsNode);
+      expect(matches[0][1]).to.equal(clsBody);
+    });
+
+
+    describe('should find named class with super class', function() {
+
+      // given
+      const clsMatcher = matcher`
+        class Foo extends $$$ {
+          $$$
+        }
+      `;
+
+      it('existing', function() {
+
+        const ast = parse(`
+          class Foo extends Bar {
+
+            constructor() {
+              this.bar = bar;
+            }
+          }
+        `);
+
+        const body = path(ast.program).get('body');
+
+        const clsNode = body.get(0);
+
+        // when
+        const matches = clsMatcher(body);
+
+        // then
+        expect(matches).to.have.length(1);
+
+        expect(matches[0][0]).to.equal(clsNode);
+      });
+
+
+      it('non-existing', function() {
+
+        const ast = parse(`
+          class Foo {
+
+            constructor() {
+              this.bar = bar;
+            }
+          }
+        `);
+
+        const body = path(ast.program).get('body');
+
+        const clsNode = body.get(0);
+
+        // when
+        const matches = clsMatcher(body);
+
+        // then
+        expect(matches).to.have.length(1);
+
+        expect(matches[0][0]).to.equal(clsNode);
+      });
+
+    });
+
+
+    describe('should match super class', function() {
+
+      // given
+      const clsMatcher = matcher`
+        class Foo extends $$1 {
+          $$$
+        }
+      `;
+
+
+      it('existing', function() {
+
+        const ast = parse(`
+          class Foo extends Bar {
+
+            constructor() {
+              this.bar = bar;
+            }
+          }
+        `);
+
+        const body = path(ast.program).get('body');
+
+        const clsNode = body.get(0);
+        const superClsDecl = clsNode.get('superClass');
+
+        // when
+        const matches = clsMatcher(body);
+
+        // then
+        expect(matches).to.have.length(1);
+
+        expect(matches[0][0]).to.equal(clsNode);
+        expect(matches[0][1]).to.equal(superClsDecl);
+      });
+
+
+      it('non-existing', function() {
+
+        const ast = parse(`
+          class Foo {
+
+            constructor() {
+              this.bar = bar;
+            }
+          }
+        `);
+
+        const body = path(ast.program).get('body');
+
+        const clsNode = body.get(0);
+        const superClsDecl = clsNode.get('superClass');
+
+        // when
+        const matches = clsMatcher(body);
+
+        // then
+        expect(matches).to.have.length(1);
+
+        expect(matches[0][0]).to.equal(clsNode);
+        expect(matches[0][1]).to.equal(superClsDecl);
+      });
+
+    });
+
+
     it('should find import declaration', function() {
 
       // given
