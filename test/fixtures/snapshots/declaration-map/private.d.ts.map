@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/private.d.ts","mappings":"","names":[],"ignoreList":[],"sources":[],"sourcesContent":[]}
+{"version":3,"file":"test/fixtures/snapshots/declaration-map/private.d.ts","mappings":"AAAAA","names":["Foo class"],"ignoreList":[],"sources":["test/fixtures/pre/private.js"],"sourcesContent":["function Foo() {\n\n  /**\n   * @private\n   */\n  this.bar = 10;\n\n  this._woop = 100;\n}\n\nFoo.prototype._ooops = function() {};"]}

@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/static.d.ts","mappings":"","names":[],"ignoreList":[],"sources":[],"sourcesContent":[]}
+{"version":3,"file":"test/fixtures/snapshots/declaration-map/static.d.ts","mappings":"AAAAA;IAIAC;IAIAC;IARAC","names":["Foo class","Foo#bar","Foo#$inject","Foo constructor"],"ignoreList":[],"sources":["test/fixtures/pre/static.js"],"sourcesContent":["function Foo(a) {\n\n}\n\nFoo.bar = function(a) {\n  return a + 1;\n};\n\nFoo.$inject = [ 'a' ];"]}
