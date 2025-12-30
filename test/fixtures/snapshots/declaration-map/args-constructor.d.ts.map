@@ -1,1 +1,1 @@
-{"version":3,"file":"args-constructor.d.ts","sourceRoot":"","sources":["../../pre/args-constructor.js"],"names":[],"mappings":"AACA;IACE,4BAGC;IAFC,OAAU;IACV,OAAU;CAEb"}
+{"version":3,"file":"test/fixtures/snapshots/declaration-map/args-constructor.d.ts","mappings":";;IAEE;IACA","names":[],"ignoreList":[],"sources":["test/fixtures/pre/args-constructor.js"],"sourcesContent":["\nfunction Foo(a, b) {\n  this.a = a;\n  this.b = b;\n}"]}

@@ -1,1 +1,1 @@
-{"version":3,"file":"private.expected.d.ts","sourceRoot":"","sources":["../../pre/private.expected.js"],"names":[],"mappings":"AAAA;IAGI;;OAEG;IACH,YAAa;IAEb,cAAgB;IAGlB,eAAW;CACZ"}
+{"version":3,"file":"test/fixtures/snapshots/declaration-map/private.expected.d.ts","mappings":"AAAA","names":[],"ignoreList":[],"sources":["test/fixtures/pre/private.expected.js"],"sourcesContent":["class Foo {\n  constructor() {\n\n    /**\n     * @private\n     */\n    this.bar = 10;\n\n    this._woop = 100;\n  }\n\n  _ooops() {}\n}"]}

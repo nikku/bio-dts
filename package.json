@@ -30,6 +30,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/parser": "^7.28.5",
+    "@jridgewell/remapping": "^2.3.5",
     "recast": "^0.23.11",
     "tiny-glob": "^0.2.9"
   },

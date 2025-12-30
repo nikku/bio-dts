@@ -1,1 +1,1 @@
-{"version":3,"file":"basic.expected.d.ts","sourceRoot":"","sources":["../../pre/basic.expected.js"],"names":[],"mappings":"AAAA;IAEI,YAAa;IAGf,eAEC;CACF"}
+{"version":3,"file":"test/fixtures/snapshots/declaration-map/basic.expected.d.ts","mappings":"AAAA;IAEI;IAGF","names":[],"ignoreList":[],"sources":["test/fixtures/pre/basic.expected.js"],"sourcesContent":["class Foo {\n  constructor() {\n    this.bar = 10\n  }\n\n  woop() {\n    return 10;\n  }\n}"]}

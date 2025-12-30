@@ -1,1 +1,1 @@
-{"version":3,"file":"const.expected.d.ts","sourceRoot":"","sources":["../../pre/const.expected.js"],"names":[],"mappings":"AAAA,yBAAoB;AAEpB,kBAAmB,GAAG,CAAC"}
+{"version":3,"file":"test/fixtures/snapshots/declaration-map/const.expected.d.ts","mappings":"AAAA;AAEA,kBAAmB,GAAG","names":[],"ignoreList":[],"sources":["test/fixtures/pre/const.expected.js"],"sourcesContent":["export var FOO = 10;\n\nexport const BAR = 100;"]}
