@@ -1,1 +1,1 @@
-{"version":3,"file":"inline-method.expected.d.ts","sourceRoot":"","sources":["../../pre/inline-method.expected.js"],"names":[],"mappings":"AAAA;IAEI,8BAEC;IAED,mBAEC;CAEJ"}
+{"version":3,"file":"test/fixtures/snapshots/declaration-map/inline-method.expected.d.ts","mappings":"AAAA;IAEI;IAIA","names":[],"ignoreList":[],"sources":["test/fixtures/pre/inline-method.expected.js"],"sourcesContent":["class Foo {\n  constructor() {\n    this.woop = function(a, b) {\n      return a + b;\n    };\n\n    this.wap = function() {\n      return false;\n    };\n  }\n}"]}

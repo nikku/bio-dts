@@ -1,1 +1,1 @@
-{"version":3,"file":"generated.d.ts","sourceRoot":"","sources":["../../lax/generated.js"],"names":[],"mappings":"AAAA;IACE;;;OAGG;IACH,eAHW,MAAM,YAMhB;IAFC,UAAU;IACV,OAAY;CAEf"}
+{"version":3,"file":"test/fixtures/snapshots/lax/generated.d.ts","mappings":"AAAA;;;;;IAKE,eAHW,MAAM;IAIf;IACA","names":[],"ignoreList":[],"sources":["test/fixtures/lax/generated.js"],"sourcesContent":["class Foo {\n  /**\n   * @param {string} a\n   * @param {string} b\n   */\n  constructor(a, b$1) {\n    this.a = a;\n    this.b = b$1;\n  }\n}"]}

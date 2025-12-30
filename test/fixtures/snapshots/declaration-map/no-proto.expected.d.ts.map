@@ -1,1 +1,1 @@
-{"version":3,"file":"no-proto.expected.d.ts","sourceRoot":"","sources":["../../pre/no-proto.expected.js"],"names":[],"mappings":"AAAA;CAEC"}
+{"version":3,"file":"test/fixtures/snapshots/declaration-map/no-proto.expected.d.ts","mappings":"AAAA","names":[],"ignoreList":[],"sources":["test/fixtures/pre/no-proto.expected.js"],"sourcesContent":["class Foo {\n  constructor() {}\n}"]}
