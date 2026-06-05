@@ -28,6 +28,7 @@ Generates clean type definitions from ES5 code bases:
 * Converts JSDoc to [TSDoc](https://github.com/microsoft/tsdoc)
 * Only exposed documented parameters
 * Validates, where needed declared parameters
+* Supports [declaration maps](https://www.typescriptlang.org/tsconfig/#declarationMap)
 
 Checkout the [test fixtures](./test/fixtures) for full coverage.
 
