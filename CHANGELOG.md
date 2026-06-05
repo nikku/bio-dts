@@ -6,6 +6,14 @@ All notable changes to [bio-dts](https://github.com/nikku/bio-dts) are documente
 
 _**Note:** Yet to be released changes appear here._
 
+## 0.15.0
+
+* `FEAT`: generate declaration maps ([#3](https://github.com/nikku/bio-dts/pull/3))
+
+### Breaking Changes
+
+* transformers return `{ code, map }` ([#3](https://github.com/nikku/bio-dts/pull/3))
+
 ## 0.14.1
 
 * `DEPS`: update to `@babel/parser@7.28.5`
