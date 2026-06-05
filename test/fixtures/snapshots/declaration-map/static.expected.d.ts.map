@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/static.expected.d.ts","mappings":"AAAA;IAKE;IAIA;IARA","names":[],"ignoreList":[],"sources":["test/fixtures/pre/static.expected.js"],"sourcesContent":["class Foo {\n  constructor(a) {\n\n  }\n\n  static bar(a) {\n    return a + 1;\n  }\n\n  static $inject = [ 'a' ];\n}"]}
+{"version":3,"file":"test/fixtures/snapshots/declaration-map/static.expected.d.ts","mappings":"AAAA;IAKE;IAIA;IARA","names":[],"ignoreList":[],"sources":["../../pre/static.expected.js"]}

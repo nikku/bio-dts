@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/args-constructor.d.ts","mappings":"AACAA;IAAAC;IACE;IACA","names":["Foo class","Foo constructor"],"ignoreList":[],"sources":["test/fixtures/pre/args-constructor.js"],"sourcesContent":["\nfunction Foo(a, b) {\n  this.a = a;\n  this.b = b;\n}"]}
+{"version":3,"file":"test/fixtures/snapshots/declaration-map/args-constructor.d.ts","mappings":"AACAA;IAAAC;IACE;IACA","names":["Foo class","Foo constructor"],"ignoreList":[],"sources":["../../pre/args-constructor.js"]}

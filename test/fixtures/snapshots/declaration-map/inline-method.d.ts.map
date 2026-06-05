@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/inline-method.d.ts","mappings":"AAAAA;IACE;IAIA","names":["Foo class"],"ignoreList":[],"sources":["test/fixtures/pre/inline-method.js"],"sourcesContent":["function Foo() {\n  this.woop = function(a, b) {\n    return a + b;\n  };\n\n  this.wap = function() {\n    return false;\n  };\n}"]}
+{"version":3,"file":"test/fixtures/snapshots/declaration-map/inline-method.d.ts","mappings":"AAAAA;IACE;IAIA","names":["Foo class"],"ignoreList":[],"sources":["../../pre/inline-method.js"]}

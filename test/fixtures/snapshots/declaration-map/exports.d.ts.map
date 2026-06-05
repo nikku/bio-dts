@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/exports.d.ts","mappings":"AAAAA;;AAEAC","names":["Foo class","Bar class"],"ignoreList":[],"sources":["test/fixtures/pre/exports.js"],"sourcesContent":["export function Foo() {}\n\nexport default function Bar() {}"]}
+{"version":3,"file":"test/fixtures/snapshots/declaration-map/exports.d.ts","mappings":"AAAAA;;AAEAC","names":["Foo class","Bar class"],"ignoreList":[],"sources":["../../pre/exports.js"]}
