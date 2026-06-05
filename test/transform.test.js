@@ -30,6 +30,8 @@ describe('transform', function() {
 
     testPreTransform('pre/jsdoc');
 
+    testPreTransform('pre/jsdoc-esm');
+
     testPreTransform('pre/jsdoc-multi-comments');
 
     testPreTransform('pre/jsdoc-exports');
