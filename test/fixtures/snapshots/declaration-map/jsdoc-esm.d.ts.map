@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/jsdoc-esm.d.ts","mappings":"AAAA;;;;;;;AASAA;;;;IAAAC","names":["Foo class","Foo constructor"],"ignoreList":[],"sources":["test/fixtures/pre/jsdoc-esm.js"],"sourcesContent":["/**\n * Great file!\n */\n\n/**\n * Foo\n *\n * @param {import('./Bar.js').default} bar\n */\nexport function Foo(bar) {\n\n}"]}
+{"version":3,"file":"test/fixtures/snapshots/declaration-map/jsdoc-esm.d.ts","mappings":"AAAA;;;;;;;AASAA;;;;IAAAC","names":["Foo class","Foo constructor"],"ignoreList":[],"sources":["../../pre/jsdoc-esm.js"]}

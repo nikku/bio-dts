@@ -362,6 +362,42 @@ describe('sourcemap', function() {
       expect(methodPos.line).to.equal(32);
     });
 
+
+    it('should produce maps with relative source paths and no inline source text', function() {
+
+      // given
+      // use a relative path input (as the CLI does) so the CWD-relative
+      // path normalization is exercised, not just the absolute-path branch
+      const inputFile = 'test/fixtures/pre/basic.js';
+
+      // when
+      generateTypes(
+        [ inputFile ],
+        {
+          allowJs: true,
+          declaration: true,
+          emitDeclarationOnly: true,
+          declarationMap: true,
+          outDir
+        },
+        ts
+      );
+
+      // then
+      const mapFile = path.join(outDir, 'basic.d.ts.map');
+      const mapContent = JSON.parse(fs.readFileSync(mapFile, 'utf8'));
+
+      // source text must not be inlined - keeping the map small
+      // consumers should read the original file
+      expect(mapContent.sourcesContent).not.to.exist;
+
+      // sources must be relative paths, resolving to the actual source file
+      const expectedSrc = path.resolve(inputFile);
+      for (const src of mapContent.sources) {
+        expect(path.resolve(path.dirname(mapFile), src)).to.equal(expectedSrc);
+      }
+    });
+
   });
 
 });
