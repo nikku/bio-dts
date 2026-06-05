@@ -9,6 +9,8 @@ _**Note:** Yet to be released changes appear here._
 ## 0.15.0
 
 * `FEAT`: generate declaration maps ([#3](https://github.com/nikku/bio-dts/pull/3))
+* `FEAT`: generate types in accordance with local `tsconfig.json` ([#23](https://github.com/nikku/bio-dts/pull/23))
+* `DEPS`: update to `@babel/parser@7.29.7`
 
 ### Breaking Changes
 
