@@ -16,10 +16,11 @@
     "check-types": "tsc --noEmit",
     "test": "mocha test",
     "test:dts": "run-s test:dts:*",
-    "test:dts:default": "node bin/cmd.js --outDir test/fixtures/snapshots/default -r test/fixtures/pre",
-    "test:dts:jsx": "node bin/cmd.js --jsx preserve --outDir test/fixtures/snapshots/jsx -r test/fixtures/jsx",
-    "test:dts:declaration-map": "node bin/cmd.js --declarationMap --outDir test/fixtures/snapshots/declaration-map -r test/fixtures/pre",
-    "test:dts:lax": "node bin/cmd.js --declarationMap --lax --outDir test/fixtures/snapshots/lax -r test/fixtures/lax"
+    "test:dts:default": "node bin/cmd.js --module CommonJS --outDir test/fixtures/snapshots/default -r test/fixtures/pre",
+    "test:dts:jsx": "node bin/cmd.js --module CommonJS --jsx preserve --outDir test/fixtures/snapshots/jsx -r test/fixtures/jsx",
+    "test:dts:declaration-map": "node bin/cmd.js --module CommonJS --declarationMap --outDir test/fixtures/snapshots/declaration-map -r test/fixtures/pre",
+    "test:dts:lax": "node bin/cmd.js --module CommonJS --declarationMap --lax --outDir test/fixtures/snapshots/lax -r test/fixtures/lax",
+    "test:dts:esm": "node bin/cmd.js --outDir test/fixtures/snapshots/esm -r test/fixtures/esm"
   },
   "repository": {
     "type": "git",

@@ -9,6 +9,7 @@ import os from 'node:os';
 import fs from 'node:fs';
 
 import generateTypes from '../lib/generate-types.js';
+import { readTsConfigOptions } from '../lib/tsconfig.js';
 
 async function run() {
 
@@ -63,14 +64,18 @@ async function run() {
 
   console.log(`Generating types for ${files.length} files...`);
 
+  const tsConfigOptions = readTsConfigOptions(ts);
+
   const generateOptions = {
     allowJs: true,
     declaration: true,
     emitDeclarationOnly: true,
+    ...tsConfigOptions,
     ...options,
     verbose
   };
 
+  verbose && Object.keys(tsConfigOptions).length && console.log('Using tsconfig options', tsConfigOptions);
   verbose && console.log('Using options ', generateOptions);
 
   const {
