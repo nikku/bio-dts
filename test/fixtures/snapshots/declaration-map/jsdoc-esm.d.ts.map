@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/jsdoc-esm.d.ts","mappings":"AAAA;;;;;;;AASAA;;;;IAAAC","names":["Foo class","Foo constructor"],"ignoreList":[],"sources":["../../pre/jsdoc-esm.js"]}
+{"version":3,"file":"jsdoc-esm.d.ts","mappings":"AAAA;;;;;;;AASAA;;;;IAAAC","names":["Foo class","Foo constructor"],"ignoreList":[],"sources":["../../pre/jsdoc-esm.js"]}

@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/static.d.ts","mappings":"AAAAA;IAIAC;IAIAC;IARAC","names":["Foo class","Foo#bar","Foo#$inject","Foo constructor"],"ignoreList":[],"sources":["../../pre/static.js"]}
+{"version":3,"file":"static.d.ts","mappings":"AAAAA;IAIAC;IAIAC;IARAC","names":["Foo class","Foo#bar","Foo#$inject","Foo constructor"],"ignoreList":[],"sources":["../../pre/static.js"]}

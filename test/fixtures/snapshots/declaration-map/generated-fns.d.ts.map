@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/generated-fns.d.ts","mappings":"AACAA;;;;;;IAO6B,mBAQV,MAAM,KAAK,GAAG","names":["CommandInterceptor class"],"ignoreList":[],"sources":["../../pre/generated-fns.js"]}
+{"version":3,"file":"generated-fns.d.ts","mappings":"AACAA;;;;;;IAO6B,mBAQV,MAAM,KAAK,GAAG","names":["CommandInterceptor class"],"ignoreList":[],"sources":["../../pre/generated-fns.js"]}

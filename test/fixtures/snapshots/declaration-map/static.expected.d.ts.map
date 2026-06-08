@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/static.expected.d.ts","mappings":"AAAA;IAKE;IAIA;IARA","names":[],"ignoreList":[],"sources":["../../pre/static.expected.js"]}
+{"version":3,"file":"static.expected.d.ts","mappings":"AAAA;IAKE;IAIA;IARA","names":[],"ignoreList":[],"sources":["../../pre/static.expected.js"]}

@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/no-proto.d.ts","mappings":"AAAAA","names":["Foo class"],"ignoreList":[],"sources":["../../pre/no-proto.js"]}
+{"version":3,"file":"no-proto.d.ts","mappings":"AAAAA","names":["Foo class"],"ignoreList":[],"sources":["../../pre/no-proto.js"]}

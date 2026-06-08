@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/private.d.ts","mappings":"AAAAA","names":["Foo class"],"ignoreList":[],"sources":["../../pre/private.js"]}
+{"version":3,"file":"private.d.ts","mappings":"AAAAA","names":["Foo class"],"ignoreList":[],"sources":["../../pre/private.js"]}

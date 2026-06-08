@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/generated-fns.expected.d.ts","mappings":"AACA;;;;;;IAQE,mBAQiB,MAAM,KAAK,GAAG","names":[],"ignoreList":[],"sources":["../../pre/generated-fns.expected.js"]}
+{"version":3,"file":"generated-fns.expected.d.ts","mappings":"AACA;;;;;;IAQE,mBAQiB,MAAM,KAAK,GAAG","names":[],"ignoreList":[],"sources":["../../pre/generated-fns.expected.js"]}

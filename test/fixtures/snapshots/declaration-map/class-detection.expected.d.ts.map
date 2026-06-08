@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/class-detection.expected.d.ts","mappings":"AASA;gBAOA;AAhBA","names":[],"ignoreList":[],"sources":["../../pre/class-detection.expected.js"]}
+{"version":3,"file":"class-detection.expected.d.ts","mappings":"AASA;gBAOA;AAhBA","names":[],"ignoreList":[],"sources":["../../pre/class-detection.expected.js"]}
