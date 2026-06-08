@@ -6,6 +6,10 @@ All notable changes to [bio-dts](https://github.com/nikku/bio-dts) are documente
 
 _**Note:** Yet to be released changes appear here._
 
+## 0.15.1
+
+* `FIX`: carry over `async` marker for transformed functions ([#24](https://github.com/nikku/bio-dts/pull/24))
+
 ## 0.15.0
 
 * `FEAT`: generate declaration maps ([#3](https://github.com/nikku/bio-dts/pull/3))
