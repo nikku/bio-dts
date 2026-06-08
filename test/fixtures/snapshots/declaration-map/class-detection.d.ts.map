@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/class-detection.d.ts","mappings":"AAOA;gBAOA;AAdAA","names":["AClass class"],"ignoreList":[],"sources":["../../pre/class-detection.js"]}
+{"version":3,"file":"class-detection.d.ts","mappings":"AAOA;gBAOA;AAdAA","names":["AClass class"],"ignoreList":[],"sources":["../../pre/class-detection.js"]}

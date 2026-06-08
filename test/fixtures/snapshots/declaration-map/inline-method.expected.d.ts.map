@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/inline-method.expected.d.ts","mappings":"AAAA;IAEI;IAIA;IAIA;IAIA","names":[],"ignoreList":[],"sources":["../../pre/inline-method.expected.js"]}
+{"version":3,"file":"inline-method.expected.d.ts","mappings":"AAAA;IAEI;IAIA;IAIA;IAIA","names":[],"ignoreList":[],"sources":["../../pre/inline-method.expected.js"]}

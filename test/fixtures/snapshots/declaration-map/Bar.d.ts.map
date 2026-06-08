@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/Bar.d.ts","mappings":"AAAA","names":[],"ignoreList":[],"sources":["../../pre/Bar.js"]}
+{"version":3,"file":"Bar.d.ts","mappings":"AAAA","names":[],"ignoreList":[],"sources":["../../pre/Bar.js"]}

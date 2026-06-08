@@ -374,6 +374,35 @@ describe('sourcemap', function() {
     });
 
 
+    it('should produce map with file pointer relative to source map', function() {
+
+      // given
+      const inputFile = 'test/fixtures/pre/basic.js';
+
+      // when
+      generateTypes(
+        [ inputFile ],
+        {
+          allowJs: true,
+          declaration: true,
+          emitDeclarationOnly: true,
+          declarationMap: true,
+          outDir
+        },
+        ts
+      );
+
+      // then
+      const mapFile = path.join(outDir, 'basic.d.ts.map');
+      const mapContent = JSON.parse(fs.readFileSync(mapFile, 'utf8'));
+
+      // file must be relative from the map to the generated .d.ts,
+      // not an absolute path or a CWD-relative path
+      const expectedDts = path.join(outDir, 'basic.d.ts');
+      expect(path.resolve(path.dirname(mapFile), mapContent.file)).to.equal(expectedDts);
+    });
+
+
     it('should produce maps with relative source paths and no inline source text', function() {
 
       // given

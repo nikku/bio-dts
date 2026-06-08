@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/const.d.ts","mappings":"AAAA;AAEA,kBAAmB,GAAG","names":[],"ignoreList":[],"sources":["../../pre/const.js"]}
+{"version":3,"file":"const.d.ts","mappings":"AAAA;AAEA,kBAAmB,GAAG","names":[],"ignoreList":[],"sources":["../../pre/const.js"]}

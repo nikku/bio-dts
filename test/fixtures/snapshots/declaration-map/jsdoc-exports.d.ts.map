@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/jsdoc-exports.d.ts","mappings":"AAAA;;;;;;;AASAA;;;;IAAAC;;;;;;AASAC;;;;IAAAC","names":["Foo class","Foo constructor","Bar class","Bar constructor"],"ignoreList":[],"sources":["../../pre/jsdoc-exports.js"]}
+{"version":3,"file":"jsdoc-exports.d.ts","mappings":"AAAA;;;;;;;AASAA;;;;IAAAC;;;;;;AASAC;;;;IAAAC","names":["Foo class","Foo constructor","Bar class","Bar constructor"],"ignoreList":[],"sources":["../../pre/jsdoc-exports.js"]}

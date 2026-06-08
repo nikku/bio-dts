@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/jsdoc-multi-comments.expected.d.ts","mappings":"AAAA;;;AAIA;;;;AAIA;;;;IAIE,iBAFW,GAAG;;;;;;;;IAad,QAFY,MAAM","names":[],"ignoreList":[],"sources":["../../pre/jsdoc-multi-comments.expected.js"]}
+{"version":3,"file":"jsdoc-multi-comments.expected.d.ts","mappings":"AAAA;;;AAIA;;;;AAIA;;;;IAIE,iBAFW,GAAG;;;;;;;;IAad,QAFY,MAAM","names":[],"ignoreList":[],"sources":["../../pre/jsdoc-multi-comments.expected.js"]}

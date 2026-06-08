@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/jsdoc-esm.expected.d.ts","mappings":"AAAA;;;AAIA;;;;AAIA;;;;IAIE,iBAFW,OAAO,UAAU,EAAE,OAAO","names":[],"ignoreList":[],"sources":["../../pre/jsdoc-esm.expected.js"]}
+{"version":3,"file":"jsdoc-esm.expected.d.ts","mappings":"AAAA;;;AAIA;;;;AAIA;;;;IAIE,iBAFW,OAAO,UAAU,EAAE,OAAO","names":[],"ignoreList":[],"sources":["../../pre/jsdoc-esm.expected.js"]}

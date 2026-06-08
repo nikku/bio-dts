@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/jsdoc-exports.expected.d.ts","mappings":"AAAA;;;AAIA;;;;AAIA;;;;IAIE;;AAKF;;;;AAIA;;;;IAIE,iBAFW,GAAG","names":[],"ignoreList":[],"sources":["../../pre/jsdoc-exports.expected.js"]}
+{"version":3,"file":"jsdoc-exports.expected.d.ts","mappings":"AAAA;;;AAIA;;;;AAIA;;;;IAIE;;AAKF;;;;AAIA;;;;IAIE,iBAFW,GAAG","names":[],"ignoreList":[],"sources":["../../pre/jsdoc-exports.expected.js"]}

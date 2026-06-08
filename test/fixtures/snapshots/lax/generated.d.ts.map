@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/lax/generated.d.ts","mappings":"AAAA;;;;;IAKE,eAHW,MAAM;IAIf;IACA","names":[],"ignoreList":[],"sources":["../../lax/generated.js"]}
+{"version":3,"file":"generated.d.ts","mappings":"AAAA;;;;;IAKE,eAHW,MAAM;IAIf;IACA","names":[],"ignoreList":[],"sources":["../../lax/generated.js"]}

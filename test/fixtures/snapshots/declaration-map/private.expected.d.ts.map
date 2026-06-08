@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/private.expected.d.ts","mappings":"AAAA","names":[],"ignoreList":[],"sources":["../../pre/private.expected.js"]}
+{"version":3,"file":"private.expected.d.ts","mappings":"AAAA","names":[],"ignoreList":[],"sources":["../../pre/private.expected.js"]}

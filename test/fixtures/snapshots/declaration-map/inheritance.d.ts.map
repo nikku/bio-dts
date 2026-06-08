@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/inheritance.d.ts","mappings":"AAWAA;IAAAC;;AAOAC;IAAAC;;gBAlBgB,OAAO","names":["Woop class","Woop constructor","Default class","Default constructor"],"ignoreList":[],"sources":["../../pre/inheritance.js"]}
+{"version":3,"file":"inheritance.d.ts","mappings":"AAWAA;IAAAC;;AAOAC;IAAAC;;gBAlBgB,OAAO","names":["Woop class","Woop constructor","Default class","Default constructor"],"ignoreList":[],"sources":["../../pre/inheritance.js"]}
