@@ -99,3 +99,19 @@ export class Foo {
     return value;
   }
 }
+
+/**
+ * @overload
+ * @param {string} value
+ * @return {Promise<string>}
+ */
+/**
+ * @overload
+ * @param {string} [value]
+ * @param {string} info
+ *
+ * @return {Promise<string>}
+ */
+export async function asybcBaba(value, info) {
+  return value;
+}

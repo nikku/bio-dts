@@ -206,13 +206,24 @@ describe('sourcemap', function() {
       expect(classPos.line).to.equal(1);
       expect(classPos.name).to.equal('Foo class');
 
-      // '    bar: number;' (line 2) -> '  this.bar = 10' in basic.js (line 2)
-      const propPos = consumer.originalPositionFor({ line: 2, column: 4 });
+      // TypeScript emits static members before instance members in .d.ts:
+      //   line 2: static asyncStaticWoop(): Promise<number>;
+      //   line 3: bar: number;
+      //   line 4: woop(): number;
+      //   line 5: asyncWoop(): Promise<number>;
+
+      // '    static asyncStaticWoop()' (line 2) -> 'Foo.asyncStaticWoop = ...' in basic.js (line 13)
+      const staticMethodPos = consumer.originalPositionFor({ line: 2, column: 4 });
+      expect(staticMethodPos.source).to.include('basic.js');
+      expect(staticMethodPos.line).to.equal(13);
+
+      // '    bar: number;' (line 3) -> '  this.bar = 10' in basic.js (line 2)
+      const propPos = consumer.originalPositionFor({ line: 3, column: 4 });
       expect(propPos.source).to.include('basic.js');
       expect(propPos.line).to.equal(2);
 
-      // '    woop(): number;' (line 3) -> 'Foo.prototype.woop = function()' in basic.js (line 5)
-      const methodPos = consumer.originalPositionFor({ line: 3, column: 4 });
+      // '    woop(): number;' (line 4) -> 'Foo.prototype.woop = function()' in basic.js (line 5)
+      const methodPos = consumer.originalPositionFor({ line: 4, column: 4 });
       expect(methodPos.source).to.include('basic.js');
       expect(methodPos.line).to.equal(5);
     });

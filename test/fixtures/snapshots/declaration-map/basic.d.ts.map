@@ -1,1 +1,1 @@
-{"version":3,"file":"test/fixtures/snapshots/declaration-map/basic.d.ts","mappings":"AAAAA;IACE;IAGY","names":["Foo class"],"ignoreList":[],"sources":["../../pre/basic.js"]}
+{"version":3,"file":"test/fixtures/snapshots/declaration-map/basic.d.ts","mappings":"AAAAA;IAYAC;IAXE;IAGY","names":["Foo class","Foo#asyncStaticWoop"],"ignoreList":[],"sources":["../../pre/basic.js"]}
