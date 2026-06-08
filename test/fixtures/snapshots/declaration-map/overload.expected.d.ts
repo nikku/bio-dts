@@ -65,6 +65,27 @@ export function baba(value: string, info: string): string;
  */
 export function noActualOverload(value: string): string;
 
+/**
+ * @param value
+ * @return
+ */
+export function asybcBaba(value: string): Promise<string>;
+
+/**
+ * @param info
+ *
+ * @return
+ */
+export function asybcBaba(info: string): Promise<string>;
+
+/**
+ * @param value
+ * @param info
+ *
+ * @return
+ */
+export function asybcBaba(value: string, info: string): Promise<string>;
+
 export class Foo {
   /**
    * @param value
