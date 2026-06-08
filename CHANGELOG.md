@@ -6,6 +6,10 @@ All notable changes to [bio-dts](https://github.com/nikku/bio-dts) are documente
 
 _**Note:** Yet to be released changes appear here._
 
+## 0.15.2
+
+* `FIX`: generate declaration map with local `file` pointers ([#25](https://github.com/nikku/bio-dts/pull/25))
+
 ## 0.15.1
 
 * `FIX`: carry over `async` marker for transformed functions ([#24](https://github.com/nikku/bio-dts/pull/24))
