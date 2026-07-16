@@ -6,6 +6,8 @@ All notable changes to [bio-dts](https://github.com/nikku/bio-dts) are documente
 
 _**Note:** Yet to be released changes appear here._
 
+* `DEPS`: update to `recast@0.23.12`
+
 ## 0.15.3
 
 * `FIX`: correct error on too many `@return(s)` annotations
