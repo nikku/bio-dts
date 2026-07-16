@@ -6,7 +6,10 @@
     "strict": false,
     "module": "NodeNext",
     "esModuleInterop": true,
-    "checkJs": true
+    "checkJs": true,
+    "types": [
+      "node"
+    ]
   },
   "include": [
     "index.js",
