@@ -36,13 +36,13 @@ export function bar(value: string): string;
  *
  * @return
  */
-export function bar(value: string, info?: string): string;
+export function bar(value: string, info?: string | undefined): string;
 
 /**
  * @param value
  * @return
  */
-export function baba(value?: string): string;
+export function baba(value?: string | undefined): string;
 
 /**
  * @param info
@@ -57,7 +57,7 @@ export function baba(info: string): string;
  *
  * @return
  */
-export function baba(value: string, info: string): string;
+export function baba(value: string | undefined, info: string): string;
 
 /**
  * @param value
@@ -84,7 +84,7 @@ export function asybcBaba(info: string): Promise<string>;
  *
  * @return
  */
-export function asybcBaba(value: string, info: string): Promise<string>;
+export function asybcBaba(value: string | undefined, info: string): Promise<string>;
 
 export class Foo {
   /**
@@ -106,6 +106,6 @@ export class Foo {
    *
    * @return
    */
-  bar(value: number, info: string): number;
+  bar(value: number | undefined, info: string): number;
 }
 //# sourceMappingURL=overload.expected.d.ts.map
