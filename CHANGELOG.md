@@ -6,7 +6,10 @@ All notable changes to [bio-dts](https://github.com/nikku/bio-dts) are documente
 
 _**Note:** Yet to be released changes appear here._
 
-* `DEPS`: update to `recast@0.23.12`
+## 0.16.0
+
+* `DEPS`: update to `@babel/parser@7.29.9`
+* `DEPS`: update to `recast@0.24.0`
 
 ## 0.15.3
 
