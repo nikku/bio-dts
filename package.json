@@ -29,14 +29,14 @@
   "author": "Nico Rehwaldt",
   "license": "MIT",
   "dependencies": {
-    "@babel/parser": "^7.29.7",
+    "@babel/parser": "^7.29.9",
     "@jridgewell/remapping": "^2.3.5",
     "@jridgewell/source-map": "^0.3.11",
     "recast": "^0.23.12",
     "tiny-glob": "^0.2.9"
   },
   "devDependencies": {
-    "@babel/types": "^7.29.7",
+    "@babel/types": "^7.29.8",
     "@types/mocha": "^10.0.10",
     "@types/node": "^24.13.3",
     "chai": "^6.2.2",
